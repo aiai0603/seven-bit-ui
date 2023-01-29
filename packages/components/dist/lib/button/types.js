@@ -1,0 +1,1 @@
+"use strict";Object.defineProperty(exports,Symbol.toStringTag,{value:"Module"});const e=["primary","text"],o=["large","small"],n={type:{type:String,validator(t){return e.includes(t)},default:"primary"},size:{type:String,validator(t){return o.includes(t)}},round:Boolean,disabled:Boolean};exports.ButtonSize=o;exports.ButtonType=e;exports.buttonProps=n;

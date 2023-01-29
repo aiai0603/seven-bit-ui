@@ -1,0 +1,17 @@
+{
+  "name": "seven-bit-ui",
+  "version": "1.0.1",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "files": [
+    "es",
+    "lib"
+  ],
+  "keywords": [
+    "seven-bit-ui"
+  ],
+  "author": "zs",
+  "license": "MIT",
+  "description": "",
+  "typings": "lib/index.d.ts"
+}

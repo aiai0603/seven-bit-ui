@@ -1,0 +1,25 @@
+{
+  "name": "seven-bit-ui",
+  "version": "1.0.9",
+  "main": "index.ts",
+  "scripts": {
+    "build": "vite build",
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "files": [
+    "es",
+    "lib"
+  ],
+  "keywords": [
+    "seven-bit-ui",
+    "vue3组件库"
+  ],
+  "author": "zs",
+  "license": "MIT",
+  "description": "",
+  "typings": "lib/index.d.ts",
+  "dependencies": {
+    "@seven-bit-ui/utils": "workspace:^1.0.1"
+  }
+}
