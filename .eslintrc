@@ -1,4 +1,4 @@
 {
   "root": true,
-  "extends": ["@ls-ui/eslint-config"]
+  "extends": ["@seven-bit-ui/eslint-config"]
 }

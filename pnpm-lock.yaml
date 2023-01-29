@@ -4,6 +4,7 @@ importers:
 
   .:
     specifiers:
+      '@seven-bit-ui/eslint-config': workspace:^0.0.1
       '@types/gulp': ^4.0.10
       '@types/gulp-autoprefixer': ^0.0.33
       '@types/gulp-less': ^0.0.32
@@ -40,6 +41,7 @@ importers:
       vitest: ^0.28.3
       vue: ^3.2.36
     devDependencies:
+      '@seven-bit-ui/eslint-config': link:packages/eslint-config
       '@types/gulp': 4.0.10
       '@types/gulp-autoprefixer': 0.0.33
       '@types/gulp-less': 0.0.32

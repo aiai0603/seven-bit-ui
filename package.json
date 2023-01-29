@@ -28,6 +28,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@seven-bit-ui/eslint-config": "workspace:^0.0.1",
     "@types/gulp": "^4.0.10",
     "@types/gulp-autoprefixer": "^0.0.33",
     "@types/gulp-less": "^0.0.32",
