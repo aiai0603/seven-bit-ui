@@ -3,3 +3,4 @@ docs/node_modules
 examples/node_modules
 packages/components/dist
 packages/components/transitpkg
+pnpm-lock.yaml
