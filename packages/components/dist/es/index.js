@@ -1,7 +1,6 @@
 import t from "./button/index.js";
-const e = {
-  LsButton: t
-};
+const e = [t];
 export {
+  t as LsButton,
   e as default
 };

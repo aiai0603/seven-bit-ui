@@ -1,5 +1,4 @@
-import LsButton from './button';
+import { default as LsButton } from './button';
 
-export default {
-  LsButton
-};
+export { LsButton };
+export default [LsButton];

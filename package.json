@@ -57,7 +57,7 @@
     "postcss-less": "^6.0.0",
     "prettier": "^2.8.3",
     "rimraf": "^4.1.2",
-    "seven-bit-ui": "workspace:^1.0.9",
+    "seven-bit-ui": "workspace:^1.0.5",
     "stylelint": "^14.16.1",
     "stylelint-config-prettier": "^9.0.4",
     "stylelint-config-standard": "^29.0.0",

@@ -1,8 +1,8 @@
 import { defineComponent as p, useAttrs as c, computed as m, openBlock as d, createElementBlock as a, mergeProps as b, unref as o, renderSlot as f } from "vue";
 import "./style/index.css";
 import { buttonProps as k } from "./types.js";
-const B = /* @__PURE__ */ p({
-  name: "button",
+const z = /* @__PURE__ */ p({
+  __name: "button",
   props: k,
   emits: ["click"],
   setup(s, { emit: n }) {
@@ -23,5 +23,5 @@ const B = /* @__PURE__ */ p({
   }
 });
 export {
-  B as default
+  z as default
 };

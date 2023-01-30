@@ -3,7 +3,7 @@
     <slot />
   </button>
 </template>
-<script lang="ts" setup>
+<script lang="ts" setup name="LsButton">
   import './style/index.less';
   import { computed, useAttrs, defineEmits } from 'vue';
   import { buttonProps } from './types';
