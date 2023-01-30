@@ -1,1 +1,1 @@
-"use strict";const t=require("@seven-bit-ui/utils"),e=require("./button.vue.js"),s=t.withInstall(e);module.exports=s;
+"use strict";const c=require("./button.vue.js"),n=(t,o)=>{if(t.install=s=>{for(const e of[t,...Object.values(o??{})])s.component(e.name,e)},o)for(const[s,e]of Object.entries(o))t[s]=e;return t},u=n(c);module.exports=u;
