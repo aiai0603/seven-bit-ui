@@ -6,8 +6,8 @@
 <script lang="ts" setup>
   import './style/index.less';
   import { computed, useAttrs, defineEmits } from 'vue';
-  import { buttonProps } from './types';
-  const props = defineProps(buttonProps);
+  import { linkProps } from './types';
+  const props = defineProps(linkProps);
   const attrs = useAttrs();
 
   const emits = defineEmits(['click']);

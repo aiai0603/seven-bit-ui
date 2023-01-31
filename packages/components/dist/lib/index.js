@@ -1,1 +1,1 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const n=require("./sbButton/index.js"),e=[n],s={install:o=>{for(const t in e)o.component(e[t].__name,e[t])}};exports.sbButton=n;exports.default=s;
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const t=require("./sbButton/index.js"),o=require("./sbLink/index.js"),e=[t,o],i={install:s=>{for(const n in e)s.component(e[n].__name,e[n])}};exports.sbButton=t;exports.sbLink=o;exports.default=i;

@@ -4,7 +4,7 @@ export const ButtonType = ['primary', 'text'];
 
 export const ButtonSize = ['large', 'small'];
 
-export const buttonProps = {
+export const linkProps = {
   type: {
     type: String,
     validator(value: string) {
@@ -22,4 +22,4 @@ export const buttonProps = {
   disabled: Boolean
 };
 
-export type ButtonProps = ExtractPropTypes<typeof buttonProps>;
+export type LinkProps = ExtractPropTypes<typeof linkProps>;
