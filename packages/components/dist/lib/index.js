@@ -1,1 +1,1 @@
-"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const e=require("./button/index.js"),t=[e];exports.LsButton=e;exports.default=t;
+"use strict";Object.defineProperties(exports,{__esModule:{value:!0},[Symbol.toStringTag]:{value:"Module"}});const n=require("./LsButton/index.js"),e=[n],s={install:o=>{for(const t in e)o.component(e[t].__name,e[t])}};exports.LsButton=n;exports.default=s;

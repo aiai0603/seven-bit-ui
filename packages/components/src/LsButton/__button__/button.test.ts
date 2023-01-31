@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 import { mount } from '@vue/test-utils';
-import LsButton from '../button.vue';
+import LsButton from '../LsButton.vue';
 
 describe('test Button', () => {
   it('slot test', () => {

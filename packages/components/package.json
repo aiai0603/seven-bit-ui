@@ -1,7 +1,7 @@
 {
   "name": "seven-bit-ui",
   "version": "1.0.9",
-  "main": "index.ts",
+  "main": "src/index.ts",
   "scripts": {
     "build": "vite build",
     "test": "vitest",

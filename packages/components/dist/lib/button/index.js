@@ -1,1 +1,0 @@
-"use strict";const n=require("./button.vue.js"),c=(t,o)=>{if(t.install=s=>{for(const e of[t,...Object.values(o??{})])s.component(e.name,e)},o)for(const[s,e]of Object.entries(o))t[s]=e;return t},u=c(n);module.exports=u;

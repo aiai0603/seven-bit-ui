@@ -4,7 +4,6 @@
   </div>
 </template>
 <script lang="ts" setup>
-  import { LsButton } from 'seven-bit-ui';
   const test = (msg: number) => {
     console.log(msg);
   };
