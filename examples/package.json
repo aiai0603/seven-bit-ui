@@ -11,6 +11,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "seven-bit-ui": "workspace:2.0.9"
+    "seven-bit-ui": "workspace:0.0.1"
   }
 }

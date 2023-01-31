@@ -1,4 +1,4 @@
-import Button from './LsButton.vue';
+import Button from './sbButton.vue';
 
 const withInstall = (comp: any) => {
   comp.install = (app: any) => {
@@ -8,5 +8,5 @@ const withInstall = (comp: any) => {
   return comp;
 };
 
-const LsButton = withInstall(Button);
-export default LsButton;
+const sbButton = withInstall(Button);
+export default sbButton;

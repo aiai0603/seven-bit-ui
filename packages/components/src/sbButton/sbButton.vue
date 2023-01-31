@@ -14,11 +14,11 @@
 
   const styleClass = computed(() => {
     return {
-      'ls-button': true,
-      [`ls-button-${props.type}`]: props.type,
+      'sb-button': true,
+      [`sb-button-${props.type}`]: props.type,
       'is-round': props.round,
       'is-disabled': props.disabled,
-      [`ls-button-${props.size}`]: props.size
+      [`sb-button-${props.size}`]: props.size
     };
   });
 

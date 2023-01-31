@@ -1,6 +1,6 @@
-import { default as LsButton } from './LsButton';
+import { default as sbButton } from './sbButton';
 
-const components = [LsButton];
+const components = [sbButton];
 export default {
   install: (app: any) => {
     for (const comkey in components) {
@@ -9,4 +9,4 @@ export default {
   }
 };
 
-export { LsButton };
+export { sbButton };

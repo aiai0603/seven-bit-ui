@@ -5,7 +5,6 @@
   "main": "index.js",
   "scripts": {
     "exm:dev": "pnpm run --filter ./examples dev",
-    "doc:dev": "pnpm run --filter ./docs docs:dev",
     "test": "pnpm run --filter ./packages/components test",
     "coverage": "pnpm run --filter ./packages/components coverage",
     "build": "gulp -f packages/components/script/build.ts",
