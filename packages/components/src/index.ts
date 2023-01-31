@@ -1,6 +1,8 @@
 import { default as sbButton } from './sbButton';
 
-const components = [sbButton];
+import { default as sbLink } from './sbLink';
+
+const components = [sbButton, sbLink];
 export default {
   install: (app: any) => {
     for (const comkey in components) {
@@ -9,4 +11,4 @@ export default {
   }
 };
 
-export { sbButton };
+export { sbButton, sbLink };

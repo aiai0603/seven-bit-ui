@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sb-button type="primary" size="small" round name="lst" @click="test"> 哈哈哈哈哈 </sb-button>
+    <sb-link type="primary" size="small" round name="lst" @click="test"> 哈哈哈哈哈 </sb-link>
   </div>
 </template>
 <script lang="ts" setup>

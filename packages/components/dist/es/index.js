@@ -1,4 +1,4 @@
-import e from "./LsButton/index.js";
+import e from "./sbButton/index.js";
 const o = [e], c = {
   install: (t) => {
     for (const n in o)
@@ -6,6 +6,6 @@ const o = [e], c = {
   }
 };
 export {
-  e as LsButton,
-  c as default
+  c as default,
+  e as sbButton
 };
