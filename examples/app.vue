@@ -1,10 +1,97 @@
 <template>
   <div>
-    <sb-link type="primary" size="small" round name="lst" @click="test"> 哈哈哈哈哈 </sb-link>
+    <sb-button size="small"> 小按钮 </sb-button>
+    <sb-button> 默认按钮 </sb-button>
+    <sb-button size="large"> 大按钮 </sb-button>
+  </div>
+  <div>
+    <sb-button size="small" round> 小按钮 </sb-button>
+    <sb-button round> 默认按钮 </sb-button>
+    <sb-button size="large" round> 大按钮 </sb-button>
+  </div>
+  <div style="width: 300px">
+    <sb-button size="small" long> 长按钮 </sb-button>
+  </div>
+  <div>
+    <sb-button status="warning"> 警告 </sb-button>
+    <sb-button status="danger"> 危险 </sb-button>
+    <sb-button status="success"> 成功 </sb-button>
+    <sb-button status="secondary"> 次要 </sb-button>
+    <sb-button status="default"> 默认 </sb-button>
+  </div>
+  <div>
+    <sb-button status="warning" type="outline"> 中空 </sb-button>
+    <sb-button status="danger" type="outline"> 中空 </sb-button>
+    <sb-button status="success" type="outline"> 中空 </sb-button>
+    <sb-button status="secondary" type="outline"> 中空 </sb-button>
+    <sb-button type="outline"> 中空 </sb-button>
+  </div>
+  <div>
+    <sb-button status="warning" type="text"> 文字 </sb-button>
+    <sb-button status="danger" type="text"> 文字 </sb-button>
+    <sb-button status="success" type="text"> 文字 </sb-button>
+    <sb-button status="secondary" type="text"> 文字 </sb-button>
+    <sb-button type="text"> 文字 </sb-button>
+  </div>
+  <div>
+    <sb-button type="outline" disabled> 中空禁用 </sb-button>
+    <sb-button type="text" disabled> 文字禁用 </sb-button>
+    <sb-button disabled> 基础禁用 </sb-button>
+  </div>
+  <div>
+    <sb-button status="warning" type="outline" disabled> 中空禁用 </sb-button>
+    <sb-button status="warning" type="text" disabled> 文字禁用 </sb-button>
+    <sb-button status="warning" disabled> 基础禁用 </sb-button>
+  </div>
+  <div>
+    <sb-button status="danger" type="outline" disabled> 中空禁用 </sb-button>
+    <sb-button status="danger" type="text" disabled> 文字禁用 </sb-button>
+    <sb-button status="danger" disabled> 基础禁用 </sb-button>
+  </div>
+  <div>
+    <sb-button status="secondary" type="outline" disabled> 中空禁用 </sb-button>
+    <sb-button status="secondary" type="text" disabled> 文字禁用 </sb-button>
+    <sb-button status="secondary" disabled> 基础禁用 </sb-button>
+  </div>
+  <div>
+    <sb-button status="success" type="outline" disabled> 中空禁用 </sb-button>
+    <sb-button status="success" type="text" disabled> 文字禁用 </sb-button>
+    <sb-button status="success" disabled> 基础禁用 </sb-button>
+  </div>
+  <div> <sb-button @click="test(1, $event)"> 基础禁用 </sb-button> 计数是:{{ count }} </div>
+
+  <div>
+    <sb-link type="default" title="这是一个打开我们git的链接" href="https://github.com/aiai0603" target="_blank"> 这是一个默认链接 </sb-link>
+    <sb-link type="warning"> 这是一个警告链接 </sb-link>
+    <sb-link type="success"> 这是一个成功链接 </sb-link>
+    <sb-link type="error"> 这是一个错误链接 </sb-link>
+    <sb-link type="secondary"> 这是一个次级链接 </sb-link>
+  </div>
+  <div>
+    <sb-link type="default" disabled title="这是一个打开我们git的链接" href="https://github.com/aiai0603" target="_blank"> 这是一个默认链接 </sb-link>
+    <sb-link type="warning" disabled> 这是一个警告链接 </sb-link>
+    <sb-link type="success" disabled> 这是一个成功链接 </sb-link>
+    <sb-link type="error" disabled> 这是一个错误链接 </sb-link>
+    <sb-link type="secondary" disabled> 这是一个次级链接 </sb-link>
+  </div>
+  <div>
+    <sb-link type="default" underline title="这是一个打开我们git的链接" href="https://github.com/aiai0603" target="_blank"> 这是一个下划线链接 </sb-link>
   </div>
 </template>
 <script lang="ts" setup>
-  const test = (msg: number) => {
-    console.log(msg);
+  import { ref } from 'vue';
+
+  let count = ref(1);
+  const test = (num: number, e: Event) => {
+    console.log(e);
+    count.value += num;
   };
 </script>
+<style>
+  .sb-button {
+    margin: 10px;
+  }
+  .sb-link {
+    margin: 10px;
+  }
+</style>

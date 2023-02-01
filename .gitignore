@@ -4,3 +4,4 @@ examples/node_modules
 **/dist
 **/transitpkg
 pnpm-lock.yaml
+examples/app.vue
