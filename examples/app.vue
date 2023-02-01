@@ -77,6 +77,13 @@
   <div>
     <sb-link type="default" underline title="这是一个打开我们git的链接" href="https://github.com/aiai0603" target="_blank"> 这是一个下划线链接 </sb-link>
   </div>
+  <div>
+    <sb-icon name="check-circle-fill" class="test-icon" style="color: green" />
+    <sb-icon name="info-circle-fill" class="test-icon" style="color: blue" />
+    <sb-icon name="close-circle-fill" class="test-icon" />
+    <sb-icon name="warning-circle-fill" class="test-icon" style="color: red" />
+    <sb-icon name="close" class="test-icon" />
+  </div>
 </template>
 <script lang="ts" setup>
   import { ref } from 'vue';
@@ -88,6 +95,9 @@
   };
 </script>
 <style>
+  .test-icon {
+    font-size: 40px;
+  }
   .sb-button {
     margin: 10px;
   }
