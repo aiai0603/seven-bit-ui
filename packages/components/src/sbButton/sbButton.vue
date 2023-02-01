@@ -1,5 +1,5 @@
 <template>
-  <button :class="styleClass" v-bind="attrs" @click="myClick()">
+  <button :class="styleClass" v-bind="attrs" :disabled="props.disabled" @click="myClick">
     <slot />
   </button>
 </template>
@@ -16,13 +16,15 @@
     return {
       'sb-button': true,
       [`sb-button-${props.type}`]: props.type,
-      'is-round': props.round,
-      'is-disabled': props.disabled,
-      [`sb-button-${props.size}`]: props.size
+      [`sb-button-${props.status}`]: props.status,
+      'sb-button-is-round': props.round,
+      'sb-button-is-long': props.long,
+      'sb-button-is-disabled': props.disabled,
+      [`sb-button-size-${props.size}`]: props.size
     };
   });
 
-  const myClick = () => {
-    emits('click', 11);
+  const myClick = (e: Event) => {
+    emits('click', e);
   };
 </script>

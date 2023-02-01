@@ -1,93 +1,336 @@
 .sb-button {
   display: inline-block;
-  line-height: 1;
-  white-space: nowrap;
-  cursor: pointer;
-  background: #fff;
-  border: 1px solid #dcdfe6;
-  color: #606266;
-  appearance: none;
-  text-align: center;
-  box-sizing: border-box;
+  position: relative;
   outline: none;
-  margin: 0;
-  transition: 0.1s;
-  font-weight: 500;
-  padding: 12px 20px;
-  font-size: 14px;
-  border-radius: 4px;
-
-  &:hover {
-    color: #409eff;
-    border-color: #c6e2ff;
-    background-color: #ecf5ff;
-  }
+  font-weight: 400;
+  appearance: none;
+  user-select: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.1s linear;
+  box-sizing: border-box;
+  line-height: 1.5715;
 }
 
-.sb-button-primary {
+.sb-button-default.sb-button-primary {
+  background-color: #165dff;
   color: #fff;
-  background-color: #409eff;
-  border-color: #409eff;
+  border: 1px solid transparent;
 
   &:hover {
-    background: #66b1ff;
-    border-color: #66b1ff;
+    background: #4080ff;
     color: #fff;
+    border: 1px solid transparent;
   }
 }
 
-.sb-button-text {
-  border-color: transparent;
-  color: #409eff;
-  background: transparent;
-  padding-left: 0;
-  padding-right: 0;
+.sb-button-default.sb-button-primary.sb-button-is-disabled {
+  background-color: #94bfff;
+  color: #fff;
+  border: 1px solid transparent;
+  cursor: not-allowed;
+}
+
+.sb-button-default.sb-button-outline {
+  background-color: transparent;
+  color: #165dff;
+  border: 1px solid #165dff;
 
   &:hover {
-    color: #66b1ff;
-    border-color: transparent;
     background-color: transparent;
+    color: #4080ff;
+    border: 1px solid #4080ff;
   }
 }
 
-.sb-button.is-disabled {
-  color: #c0c4cc;
+.sb-button-default.sb-button-outline.sb-button-is-disabled {
+  background-color: transparent;
+  color: #94bfff;
+  border: 1px solid #94bfff;
   cursor: not-allowed;
-  background-image: none;
-  background-color: #fff;
-  border-color: #ebeef5;
 }
 
-.sb-button-primary.is-disabled,
-.sb-button-primary.is-disabled:active,
-.sb-button-primary.is-disabled:focus,
-.sb-button-primary.is-disabled:hover {
+.sb-button-default.sb-button-text {
+  background-color: transparent;
+  color: #165dff;
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: transparent;
+    color: #4080ff;
+    border: 1px solid transparent;
+  }
+}
+
+.sb-button-default.sb-button-text.sb-button-is-disabled {
+  background-color: transparent;
+  color: #94bfff;
+  border: 1px solid transparent;
+  cursor: not-allowed;
+}
+
+.sb-button-warning.sb-button-primary {
+  background-color: #ff7d00;
   color: #fff;
-  background-color: #a0cfff;
-  border-color: #a0cfff;
+  border: 1px solid transparent;
+
+  &:hover {
+    background: #ff9a2e;
+    color: #fff;
+    border: 1px solid transparent;
+  }
 }
 
-.sb-button-primary.is-disabled.is-plain,
-.sb-button-primary.is-disabled.is-plain:active,
-.sb-button-primary.is-disabled.is-plain:focus,
-.sb-button-primary.is-disabled.is-plain:hover {
-  color: #8cc5ff;
-  background-color: #ecf5ff;
-  border-color: #d9ecff;
+.sb-button-warning.sb-button-primary.sb-button-is-disabled {
+  background-color: #ffcf8b;
+  color: #fff;
+  border: 1px solid transparent;
+  cursor: not-allowed;
 }
 
-.sb-button-large {
-  padding: 10px 20px;
+.sb-button-warning.sb-button-outline {
+  background-color: transparent;
+  color: #ff7d00;
+  border: 1px solid #ff7d00;
+
+  &:hover {
+    background-color: transparent;
+    color: #ff9a2e;
+    border: 1px solid #ff9a2e;
+  }
+}
+
+.sb-button-warning.sb-button-outline.sb-button-is-disabled {
+  background-color: transparent;
+  color: #ffcf8b;
+  border: 1px solid #ffcf8b;
+  cursor: not-allowed;
+}
+
+.sb-button-warning.sb-button-text {
+  background-color: transparent;
+  color: #ff7d00;
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: transparent;
+    color: #ff9a2e;
+    border: 1px solid transparent;
+  }
+}
+
+.sb-button-warning.sb-button-text.sb-button-is-disabled {
+  background-color: transparent;
+  color: #ffcf8b;
+  border: 1px solid transparent;
+  cursor: not-allowed;
+}
+
+.sb-button-danger.sb-button-primary {
+  background-color: #f53f3f;
+  color: #fff;
+  border: 1px solid transparent;
+
+  &:hover {
+    background: #f76560;
+    color: #fff;
+    border: 1px solid transparent;
+  }
+}
+
+.sb-button-danger.sb-button-primary.sb-button-is-disabled {
+  background-color: #fbaca3;
+  color: #fff;
+  border: 1px solid transparent;
+  cursor: not-allowed;
+}
+
+.sb-button-danger.sb-button-outline {
+  background-color: transparent;
+  color: #f53f3f;
+  border: 1px solid #f53f3f;
+
+  &:hover {
+    background-color: transparent;
+    color: #f76560;
+    border: 1px solid #f76560;
+  }
+}
+
+.sb-button-danger.sb-button-outline.sb-button-is-disabled {
+  background-color: transparent;
+  color: #fbaca3;
+  border: 1px solid #fbaca3;
+  cursor: not-allowed;
+}
+
+.sb-button-danger.sb-button-text {
+  background-color: transparent;
+  color: #f53f3f;
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: transparent;
+    color: #f76560;
+    border: 1px solid transparent;
+  }
+}
+
+.sb-button-danger.sb-button-text.sb-button-is-disabled {
+  background-color: transparent;
+  color: #fbaca3;
+  border: 1px solid transparent;
+  cursor: not-allowed;
+}
+
+.sb-button-success.sb-button-primary {
+  background-color: #00b42a;
+  color: #fff;
+  border: 1px solid transparent;
+
+  &:hover {
+    background: #23c343;
+    color: #fff;
+    border: 1px solid transparent;
+  }
+}
+
+.sb-button-success.sb-button-primary.sb-button-is-disabled {
+  background-color: #7be188;
+  color: #fff;
+  border: 1px solid transparent;
+  cursor: not-allowed;
+}
+
+.sb-button-success.sb-button-outline {
+  background-color: transparent;
+  color: #00b42a;
+  border: 1px solid #00b42a;
+
+  &:hover {
+    background-color: transparent;
+    color: #23c343;
+    border: 1px solid #23c343;
+  }
+}
+
+.sb-button-success.sb-button-outline.sb-button-is-disabled {
+  background-color: transparent;
+  color: #7be188;
+  border: 1px solid #7be188;
+  cursor: not-allowed;
+}
+
+.sb-button-success.sb-button-text {
+  background-color: transparent;
+  color: #00b42a;
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: transparent;
+    color: #23c343;
+    border: 1px solid transparent;
+  }
+}
+
+.sb-button-success.sb-button-text.sb-button-is-disabled {
+  background-color: transparent;
+  color: #7be188;
+  border: 1px solid transparent;
+  cursor: not-allowed;
+}
+
+.sb-button-secondary.sb-button-primary {
+  background-color: #f2f3f5;
+  color: #4e5969;
+  border: 1px solid transparent;
+
+  &:hover {
+    background: #e5e6eb;
+    color: #4e5969;
+    border: 1px solid transparent;
+  }
+}
+
+.sb-button-secondary.sb-button-primary.sb-button-is-disabled {
+  background-color: #f7f8fa;
+  color: #c9cdd4;
+  border: 1px solid transparent;
+  cursor: not-allowed;
+}
+
+.sb-button-secondary.sb-button-outline {
+  background-color: transparent;
+  color: #4e5969;
+  border: 1px solid #4e5969;
+
+  &:hover {
+    background-color: transparent;
+    color: #4e5969;
+    border: 1px solid #4e5969;
+  }
+}
+
+.sb-button-secondary.sb-button-outline.sb-button-is-disabled {
+  background-color: transparent;
+  color: #c9cdd4;
+  border: 1px solid #c9cdd4;
+  cursor: not-allowed;
+}
+
+.sb-button-secondary.sb-button-text {
+  background-color: transparent;
+  color: #4e5969;
+  border: 1px solid transparent;
+
+  &:hover {
+    background-color: transparent;
+    color: #4e5969;
+    border: 1px solid transparent;
+  }
+}
+
+.sb-button-secondary.sb-button-text.sb-button-is-disabled {
+  background-color: transparent;
+  color: #c9cdd4;
+  border: 1px solid transparent;
+  cursor: not-allowed;
+}
+
+.sb-button-size-small {
+  padding: 0 15px;
   font-size: 14px;
-  border-radius: 4px;
+  height: 28px;
+  border-radius: 2px;
 }
 
-.sb-button-small {
-  padding: 9px 15px;
+.sb-button-size-default {
+  padding: 0 15px;
   font-size: 12px;
-  border-radius: 3px;
+  height: 32px;
+  border-radius: 2px;
 }
 
-.is-round {
-  border-radius: 20px;
+.sb-button-size-large {
+  padding: 0 19px;
+  font-size: 14px;
+  height: 36px;
+  border-radius: 2px;
+}
+
+.sb-button-size-small.sb-button-is-round {
+  border-radius: 14px;
+}
+
+.sb-button-size-default.sb-button-is-round {
+  border-radius: 16px;
+}
+
+.sb-button-size-large.sb-button-is-round {
+  border-radius: 18px;
+}
+
+.sb-button-is-long {
+  display: block;
+  width: 100%;
 }

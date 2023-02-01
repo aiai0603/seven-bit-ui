@@ -1,28 +1,28 @@
 <template>
-  <button :class="styleClass" v-bind="attrs" @click="myClick()">
+  <a :class="styleClass" v-bind="attrs" @click="handleAllowHref">
     <slot />
-  </button>
+  </a>
 </template>
 <script lang="ts" setup>
   import './style/index.less';
-  import { computed, useAttrs, defineEmits } from 'vue';
+  import { computed, useAttrs } from 'vue';
   import { linkProps } from './types';
   const props = defineProps(linkProps);
   const attrs = useAttrs();
 
-  const emits = defineEmits(['click']);
+  const handleAllowHref = (e: Event) => {
+    if (props.disabled) {
+      e.preventDefault();
+      return false;
+    }
+  };
 
   const styleClass = computed(() => {
     return {
-      'sb-button': true,
-      [`sb-button-${props.type}`]: props.type,
-      'is-round': props.round,
-      'is-disabled': props.disabled,
-      [`sb-button-${props.size}`]: props.size
+      'sb-link': true,
+      [`sb-link-${props.type}`]: props.type,
+      'sb-link-is-disabled': props.disabled,
+      'sb-link-is-underline': props.underline
     };
   });
-
-  const myClick = () => {
-    emits('click', 11);
-  };
 </script>

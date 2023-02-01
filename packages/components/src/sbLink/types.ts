@@ -1,24 +1,16 @@
 import type { ExtractPropTypes } from 'vue';
 
-export const ButtonType = ['primary', 'text'];
-
-export const ButtonSize = ['large', 'small'];
+export const LinkType = ['warning', 'error', 'success', 'secondary', 'default', 'secondary'];
 
 export const linkProps = {
   type: {
     type: String,
     validator(value: string) {
-      return ButtonType.includes(value);
+      return LinkType.includes(value);
     },
-    default: 'primary'
+    default: 'default'
   },
-  size: {
-    type: String,
-    validator(value: string) {
-      return ButtonSize.includes(value);
-    }
-  },
-  round: Boolean,
+  underline: Boolean,
   disabled: Boolean
 };
 

@@ -1,11 +1,11 @@
 import { describe, expect, it } from 'vitest';
 
 import { mount } from '@vue/test-utils';
-import sbButton from '../sbLink.vue';
+import sbLink from '../sbLink.vue';
 
 describe('test Button', () => {
   it('slot test', () => {
-    const wrapper = mount(sbButton, {
+    const wrapper = mount(sbLink, {
       slots: {
         default: 'Hello world'
       }
@@ -13,7 +13,7 @@ describe('test Button', () => {
     expect(wrapper.text()).toContain('Hello world');
   });
   it('type test', () => {
-    const wrapper = mount(sbButton, {
+    const wrapper = mount(sbLink, {
       props: {
         type: 'primary'
       }
@@ -21,7 +21,7 @@ describe('test Button', () => {
     expect(wrapper.classes()).toContain('sb-button-primary');
   });
   it('size test', () => {
-    const wrapper = mount(sbButton, {
+    const wrapper = mount(sbLink, {
       props: {
         type: 'hh1'
       }
@@ -29,7 +29,7 @@ describe('test Button', () => {
     expect(wrapper.classes()).toContain('sb-button-hh1');
   });
   it('size test', () => {
-    const wrapper = mount(sbButton, {
+    const wrapper = mount(sbLink, {
       props: {
         round: 'true'
       }
