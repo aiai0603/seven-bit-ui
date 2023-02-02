@@ -21,7 +21,7 @@ export const modalProps = {
   },
   width: {
     type: [Number, String],
-    validator: (value: string|number) => typeof value === 'number' || value === 'auto',
+    validator: (value: string | number) => typeof value === 'number' || value === 'auto',
     default: 520
   },
   title: {

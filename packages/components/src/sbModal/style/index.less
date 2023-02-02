@@ -13,7 +13,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(29, 33, 41, .6);
+  background-color: rgb(29 33 41 / 60%);
 }
 
 .sb-modal-wrapper {
@@ -44,14 +44,14 @@
       width: 100%;
       height: 48px;
       padding: 0 20px;
-      border-bottom: 1px solid rgb(229, 230, 235);
+      border-bottom: 1px solid rgb(229 230 235);
 
       .sb-modal-title {
         display: flex;
         flex: 1;
         align-items: center;
         justify-content: center;
-        color: rgb(29, 33, 41);
+        color: rgb(29 33 41);
         font-weight: 500;
         font-size: 16px;
       }
@@ -60,17 +60,17 @@
         width: 20px;
         height: 20px;
         margin-left: -12px;
-        color: rgb(29, 33, 41);
+        color: rgb(29 33 41);
         font-size: 12px;
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
-        transition: background-color .1s cubic-bezier(0, 0, 1, 1);
+        transition: background-color 0.1s cubic-bezier(0, 0, 1, 1);
         border-radius: 50%;
 
         &:hover {
-          background-color: rgb(242, 243, 245);
+          background-color: rgb(242 243 245);
           border-radius: 50%;
           cursor: pointer;
         }
@@ -89,7 +89,7 @@
       position: relative;
       padding: 24px 20px;
       overflow: auto;
-      color: rgb(29, 33, 41);
+      color: rgb(29 33 41);
       font-size: 14px;
     }
 
@@ -99,9 +99,9 @@
       width: 100%;
       padding: 16px 20px;
       text-align: right;
-      border-top: 1px solid rgb(229, 230, 235);
+      border-top: 1px solid rgb(229 230 235);
 
-      &>.sb-button:not(:nth-child(1)) {
+      & > .sb-button:not(:nth-child(1)) {
         margin-left: 12px;
       }
     }
@@ -166,14 +166,13 @@
 
 // 对话框的动画
 .wrapper-enter-from {
-  opacity: 0.5;
+  opacity: 0;
   transform-origin: 50% 50%;
   transform: scale(0.8);
 }
 
 .wrapper-enter-active {
-  transition-delay: 0.2s;
-  transition: all 0.1s ease-out;
+  transition: all 0.1s ease-out 0.2s;
 }
 
 .wrapper-enter-to {
