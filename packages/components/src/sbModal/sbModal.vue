@@ -7,12 +7,16 @@
           <div :class="{ 'sb-modal': true, [modalClass ?? '']: true, 'sb-modal-simple': simple }" :style="modalStyle">
             <div v-dragger="draggable" class="sb-modal-header">
               <div :class="titleClass">
-                <span v-show="iconType !== 'none'">
-                  <slot name="icon">i-</slot>
+                <span v-show="iconType !== 'none'" class="sb-modal-title-icon" :style="{ color: icon.color }">
+                  <slot name="icon">
+                    <sb-icon :name="`${icon.type}-circle-fill`"></sb-icon>
+                  </slot>
                 </span>
                 <slot name="title">{{ title }}</slot>
               </div>
-              <div v-show="!simple && closable" class="sb-modal-close-btn" @click="close">X</div>
+              <div v-show="!simple && closable" class="sb-modal-close-btn" @click="close">
+                <sb-icon name="close"></sb-icon>
+              </div>
             </div>
             <div class="sb-modal-body" :style="modalBodyStyle">
               <slot name="body">{{ content }}</slot>
@@ -37,8 +41,32 @@
   import './style/index.less';
   import { computed, useAttrs, defineEmits, defineExpose, ref } from 'vue';
   import { modalProps } from './types';
+
+  // 接口类型
+  type IconType = 'info' | 'success' | 'warning' | 'error' | 'none';
+
+  interface IconCell {
+    readonly type: string;
+    readonly color: string;
+  }
+
+  interface IconMap {
+    info: IconCell;
+    success: IconCell;
+    warning: IconCell;
+    error: IconCell;
+    none: IconCell;
+  }
+
   const props = defineProps(modalProps);
   const attrs = useAttrs();
+  const MAP: IconMap = {
+    info: { type: 'info', color: '#165dff' },
+    success: { type: 'check', color: '#00b429' },
+    warning: { type: 'warning', color: '#ff7d00' },
+    error: { type: 'close', color: '#f53f3f' },
+    none: { type: '', color: '' }
+  };
 
   // 属性
   const ifHasMask = computed(() => !props.fullscreen && props.mask);
@@ -95,6 +123,8 @@
     return Object.assign(attributes, props.cancelButtonProps);
   });
 
+  const icon = computed(() => MAP[props.iconType as IconType]);
+
   // 注册事件
   const emits = defineEmits(['ok', 'cancel', 'before-open', 'open', 'before-close', 'close', 'update:visible']);
 
@@ -109,7 +139,11 @@
   const open = () => (visible.value = true);
 
   const close = () => (visible.value = false);
-  const maskClose = () => props.maskClosable && close();
+
+  const maskClose = (e: MouseEvent) => {
+    if (e.target !== e.currentTarget) return;
+    props.maskClosable && close();
+  };
 
   const cancelBtnClick = (e: PointerEvent) => {
     emits('cancel', e);
@@ -145,10 +179,12 @@
   }
 
   import sbButton from '../sbButton';
+  import sbIcon from '../sbIcon';
 
   export default {
     components: {
-      sbButton
+      sbButton,
+      sbIcon
     },
     directives: {
       dragger: {

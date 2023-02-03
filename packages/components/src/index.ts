@@ -2,10 +2,11 @@ import { default as sbButton } from './sbButton';
 
 import { default as sbLink } from './sbLink';
 import { default as sbModal } from './sbModal';
+import { default as sbProgress } from './sbProgress';
 
 import { default as sbIcon } from './sbIcon';
 
-const components = [sbButton, sbLink, sbIcon, sbModal];
+const components = [sbButton, sbLink, sbIcon, sbModal, sbProgress];
 
 export default {
   install: (app: any) => {
@@ -15,4 +16,4 @@ export default {
   }
 };
 
-export { sbButton, sbLink, sbIcon, sbModal };
+export { sbButton, sbLink, sbIcon, sbModal, sbProgress };

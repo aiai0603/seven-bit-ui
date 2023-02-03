@@ -2,13 +2,22 @@ import Modal from './sbModal.vue';
 import sbModalBox from './sbModal';
 import type { App } from 'vue';
 
+const loadMethods = (target: any, origin: any): void => {
+  for (const key in origin) {
+    if (Object.prototype.hasOwnProperty.call(origin, key)) {
+      const method = origin[key];
+      target[`$${key}`] = method;
+    }
+  }
+};
+
 const withInstall = (comp: any) => {
   comp.install = (app: App) => {
     //注册组件
     app.component(comp.__name, comp);
-    app.config.globalProperties.$info = sbModalBox.info;
+    loadMethods(app.config.globalProperties, sbModalBox);
   };
-  comp.$info = sbModalBox.info;
+  loadMethods(comp, sbModalBox);
   return comp;
 };
 
