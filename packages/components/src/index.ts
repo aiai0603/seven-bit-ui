@@ -1,6 +1,8 @@
 import { default as sbButton } from './sbButton';
 
 import { default as sbLink } from './sbLink';
+import { default as sbModal } from './sbModal';
+import { default as sbProgress } from './sbProgress';
 
 import { default as sbIcon } from './sbIcon';
 
@@ -8,7 +10,8 @@ import { default as sbCol } from './sbCol';
 
 import { default as sbRow } from './sbRow';
 
-const components = [sbButton, sbLink, sbIcon, sbCol, sbRow];
+const components = [sbButton, sbLink, sbIcon, sbCol, sbRow, sbModal, sbProgress];
+
 export default {
   install: (app: any) => {
     for (const comkey in components) {
@@ -17,4 +20,4 @@ export default {
   }
 };
 
-export { sbButton, sbLink, sbIcon, sbCol, sbRow };
+export { sbButton, sbLink, sbIcon, sbCol, sbRow, sbModal, sbProgress };

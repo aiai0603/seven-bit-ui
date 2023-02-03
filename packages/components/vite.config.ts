@@ -56,7 +56,6 @@ export default defineConfig({
       outputDir: resolve(__dirname, './dist/lib/src'),
       tsConfigFilePath: '../../tsconfig.json'
     }),
-
     {
       name: 'style',
       generateBundle(config, bundle) {

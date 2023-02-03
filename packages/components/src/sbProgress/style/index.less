@@ -1,0 +1,215 @@
+// 属性配置样式
+.sb-progress {
+  position: relative;
+  line-height: 1;
+  font-size: 12px;
+}
+
+.sb-progress-round {
+  .sb-progress-line,
+  .sb-progress-line-bar {
+    border-radius: 100px;
+  }
+
+  .sb-progress-circle-bar {
+    stroke-linecap: round;
+  }
+}
+
+.sb-progress-size-small {
+  .sb-progress-line {
+    height: 3px;
+  }
+
+  .sb-progress-line-text {
+    font-size: 12px;
+  }
+
+  .sb-progress-circle-wrapper {
+    width: 48px;
+    height: 48px;
+  }
+
+  .sb-progress-icon {
+    font-size: 12px;
+  }
+}
+
+.sb-progress-size-medium {
+  .sb-progress-line {
+    height: 4px;
+  }
+
+  .sb-progress-line-text {
+    font-size: 12px;
+  }
+
+  .sb-progress-circle-wrapper {
+    width: 64px;
+    height: 64px;
+  }
+
+  .sb-progress-icon {
+    font-size: 12px;
+  }
+}
+
+.sb-progress-size-large {
+  .sb-progress-line {
+    height: 8px;
+  }
+
+  .sb-progress-line-text {
+    font-size: 16px;
+  }
+
+  .sb-progress-circle-wrapper {
+    width: 80px;
+    height: 80px;
+  }
+
+  .sb-progress-icon {
+    font-size: 16px;
+  }
+}
+
+.sb-progress-status-normal {
+  .sb-progress-line-bar {
+    background-color: #165dff;
+  }
+
+  .sb-progress-circle-bar {
+    stroke: #165dff;
+  }
+
+  .sb-progress-icon {
+    color: '';
+  }
+}
+
+.sb-progress-status-warning {
+  .sb-progress-line-bar {
+    background-color: #ff7d00;
+  }
+
+  .sb-progress-circle-bar {
+    stroke: #ff7d00;
+  }
+
+  .sb-progress-icon {
+    color: #ff7d00;
+  }
+}
+
+.sb-progress-status-success {
+  .sb-progress-line-bar {
+    background-color: #00b429;
+  }
+
+  .sb-progress-circle-bar {
+    stroke: #00b429;
+  }
+
+  .sb-progress-icon {
+    color: #00b429;
+  }
+}
+
+.sb-progress-status-danger {
+  .sb-progress-line-bar {
+    background-color: #f53f3f;
+  }
+
+  .sb-progress-circle-bar {
+    stroke: #f53f3f;
+  }
+
+  .sb-progress-icon {
+    color: #f53f3f;
+  }
+}
+
+
+// 线性进度条样式
+.sb-progress-type-line {
+  display: inline-block;
+  max-width: 100%;
+  width: 100%;
+
+  .sb-progress-line-wrapper {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+
+    .sb-progress-line {
+      width: 100%;
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+
+      .sb-progress-line-bar-buffer {
+        position: absolute;
+        background-color: rgb(148 191 255);
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 0 100px 100px 0;
+        max-width: 100%;
+        transition: all 0.6s cubic-bezier(0.34, 0.69, 0.1, 1);
+      }
+
+      .sb-progress-line-bar {
+        height: 100%;
+        position: relative;
+        transition: width 0.6s cubic-bezier(0.34, 0.69, 0.1, 1), background 0.3s cubic-bezier(0.34, 0.69, 0.1, 1);
+        max-width: 100%;
+      }
+    }
+
+    .sb-progress-line-text {
+      margin-left: 16px;
+      color: rgb(78 89 105);
+      white-space: nowrap;
+      text-align: right;
+      flex-grow: 1;
+      flex-shrink: 0;
+      min-width: 32px;
+
+      .sb-progress-icon {
+        margin-left: 4px;
+      }
+    }
+  }
+}
+
+// 环形进度条样式
+.sb-progress-type-circle {
+  display: inline-block;
+
+  .sb-progress-circle-wrapper {
+    position: relative;
+    text-align: center;
+    line-height: 1;
+    display: inline-block;
+    vertical-align: text-bottom;
+
+    .sb-progress-circle-svg {
+      transform: rotate(-90deg);
+
+      .sb-progress-circle-bar {
+        stroke-dasharray: 238.761;
+        transition: stroke-dashoffset 0.6s cubic-bezier(0, 0, 1, 1) 0s, stroke 0.6s cubic-bezier(0, 0, 1, 1);
+      }
+    }
+
+    .sb-progress-circle-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 14px;
+    }
+  }
+}

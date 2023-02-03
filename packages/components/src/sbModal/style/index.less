@@ -1,0 +1,202 @@
+.sb-modal-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.sb-modal-mask {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(29 33 41 / 60%);
+}
+
+.sb-modal-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: auto;
+  text-align: center;
+
+  .sb-modal {
+    position: relative;
+    margin: 0 auto;
+    line-height: 1.5715;
+    white-space: initial;
+    text-align: left;
+    background-color: #fff;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+
+    .sb-modal-header {
+      display: flex;
+      flex-shrink: 0;
+      align-items: center;
+      box-sizing: border-box;
+      width: 100%;
+      height: 48px;
+      padding: 0 20px;
+      border-bottom: 1px solid rgb(229 230 235);
+
+      .sb-modal-title {
+        display: flex;
+        flex: 1;
+        align-items: center;
+        justify-content: center;
+        color: rgb(29 33 41);
+        font-weight: 500;
+        font-size: 16px;
+
+        .sb-modal-title-icon {
+          margin-right: 10px;
+          font-size: 18px;
+        }
+      }
+
+      .sb-modal-close-btn {
+        width: 20px;
+        height: 20px;
+        margin-left: -12px;
+        color: rgb(29 33 41);
+        font-size: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transition: background-color 0.1s cubic-bezier(0, 0, 1, 1);
+        border-radius: 50%;
+
+        &:hover {
+          background-color: rgb(242 243 245);
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+
+      .sb-modal-title-align-center {
+        justify-content: center;
+      }
+
+      .sb-modal-title-align-start {
+        justify-content: flex-start;
+      }
+    }
+
+    .sb-modal-body {
+      position: relative;
+      padding: 24px 20px;
+      overflow: auto;
+      color: rgb(29 33 41);
+      font-size: 14px;
+    }
+
+    .sb-modal-footer {
+      box-sizing: border-box;
+      flex-shrink: 0;
+      width: 100%;
+      padding: 16px 20px;
+      text-align: right;
+      border-top: 1px solid rgb(229 230 235);
+
+      & > .sb-button:not(:nth-child(1)) {
+        margin-left: 12px;
+      }
+    }
+  }
+
+  .sb-modal-simple {
+    padding: 24px 32px 32px;
+
+    .sb-modal-header {
+      margin-bottom: 24px;
+    }
+
+    .sb-modal-body {
+      padding: 0;
+    }
+
+    .sb-modal-footer {
+      margin-top: 32px;
+      text-align: center;
+    }
+  }
+
+  .sb-modal-simple .sb-modal-header,
+  .sb-modal-simple .sb-modal-footer {
+    height: unset;
+    padding: 0;
+    border: none;
+  }
+
+  .sb-modal-draggable {
+    cursor: move;
+    user-select: none;
+  }
+}
+
+// 整个盒子的动画
+.modal-enter-from {
+  opacity: 0;
+  transform-origin: 50% 50%;
+}
+
+.modal-enter-active {
+  transition: all 0.1s ease;
+}
+
+.modal-enter-to {
+  opacity: 1;
+}
+
+.modal-leave-from {
+  opacity: 1;
+}
+
+.modal-leave-active {
+  transition: all 0.1s ease 0.1s;
+}
+
+.modal-leave-to {
+  opacity: 0;
+  transform-origin: 50% 50%;
+}
+
+// 对话框的动画
+.wrapper-enter-from {
+  opacity: 0;
+  transform-origin: 50% 50%;
+  transform: scale(0.8);
+}
+
+.wrapper-enter-active {
+  transition: all 0.1s ease-out 0.2s;
+}
+
+.wrapper-enter-to {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.wrapper-leave-from {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.wrapper-leave-active {
+  transition: all 0.2s ease-out;
+}
+
+.wrapper-leave-to {
+  opacity: 0;
+  transform-origin: 50% 50%;
+  transform: scale(0.8);
+}
