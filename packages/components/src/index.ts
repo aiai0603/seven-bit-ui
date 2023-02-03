@@ -10,8 +10,11 @@ import { default as sbCol } from './sbCol';
 
 import { default as sbRow } from './sbRow';
 
-const components = [sbButton, sbLink, sbIcon, sbCol, sbRow, sbModal, sbProgress];
+import { default as sbBread } from './sbBread';
 
+import { default as sbBreadItem } from './sbBreadItem';
+
+const components = [sbButton, sbLink, sbIcon, sbCol, sbRow, sbBread, sbBreadItem, sbModal, sbProgress];
 export default {
   install: (app: any) => {
     for (const comkey in components) {
@@ -20,4 +23,4 @@ export default {
   }
 };
 
-export { sbButton, sbLink, sbIcon, sbCol, sbRow, sbModal, sbProgress };
+export { sbButton, sbLink, sbIcon, sbCol, sbRow, sbModal, sbProgress, sbBread, sbBreadItem };
