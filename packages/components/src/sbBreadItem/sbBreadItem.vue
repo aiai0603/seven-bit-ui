@@ -1,10 +1,10 @@
 <template>
-  <a v-if="props.href" class="sb-bread-item" :href="props.href">
+  <a v-if="props.href" class="sb-bread-item sb-bread-is-link" :href="props.href">
     <slot />
   </a>
-  <span v-else class="sb-bread-item">
+  <div v-else class="sb-bread-item">
     <slot />
-  </span>
+  </div>
   <sb-icon v-if="separatorIcon" class="sb-bread-item-separator" :name="separatorIcon"></sb-icon>
   <span v-else class="sb-bread-item-separator">
     {{ separator }}
