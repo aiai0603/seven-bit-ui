@@ -1,5 +1,5 @@
 <template>
-  <svg class="sb-icon" aria-hidden="true" v-bind="attrs">
+  <svg :class="styleClass" aria-hidden="true" v-bind="attrs">
     <use :xlink:href="iconName"></use>
   </svg>
 </template>
@@ -13,5 +13,12 @@
 
   const iconName = computed(() => {
     return `#sb-icon-${props.name}`;
+  });
+
+  const styleClass = computed(() => {
+    return {
+      'sb-icon': true,
+      'sb-icon-is-spin': props.spin
+    };
   });
 </script>

@@ -82,11 +82,49 @@
     <sb-icon name="info-circle-fill" class="test-icon" style="color: blue" />
     <sb-icon name="close-circle-fill" class="test-icon" />
     <sb-icon name="warning-circle-fill" class="test-icon" style="color: red" />
-    <sb-icon name="close" class="test-icon" />
+    <sb-icon name="close" class="test-icon" spin />
   </div>
+  <sb-row align="center" justify="center" style="height: 200px" :gutter="20">
+    <sb-col :span="12">
+      <div class="demo"> A </div>
+    </sb-col>
+    <sb-col :span="12">
+      <div class="demo"> B </div>
+    </sb-col>
+  </sb-row>
+
+  <sb-row align="center" justify="center">
+    <sb-col :span="16" :xs="xs" :sm="sm" :md="md" :lg="lg" :xl="xl" :xxl="xxl">
+      <div class="demo"> A </div>
+    </sb-col>
+  </sb-row>
 </template>
 <script lang="ts" setup>
   import { ref } from 'vue';
+
+  const xs = {
+    span: 2
+  };
+
+  const sm = {
+    span: 4
+  };
+
+  const md = {
+    span: 6
+  };
+
+  const lg = {
+    span: 8
+  };
+
+  const xl = {
+    span: 12
+  };
+
+  const xxl = {
+    span: 16
+  };
 
   let count = ref(1);
   const test = (num: number, e: Event) => {
@@ -95,6 +133,14 @@
   };
 </script>
 <style>
+  body {
+    display: block;
+    margin: 0px;
+  }
+  .demo {
+    height: 100px;
+    background-color: aquamarine;
+  }
   .test-icon {
     font-size: 40px;
   }
