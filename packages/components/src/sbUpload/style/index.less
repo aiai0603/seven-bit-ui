@@ -1,0 +1,54 @@
+.sb-upload {
+  .sb-upload-list {
+    .sb-upload-list-item {
+      transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
+      font-size: 14px;
+      color: #606266;
+      line-height: 1.8;
+      margin-top: 5px;
+      position: relative;
+      box-sizing: border-box;
+      border-radius: 4px;
+      border: 1px solid #606266;
+      width: 25%;
+
+      .sb-upload-list-item-name {
+        color: #606266;
+        display: block;
+        margin-right: 40px;
+        overflow: hidden;
+        padding-left: 4px;
+        text-overflow: ellipsis;
+        transition: color 0.3s;
+        white-space: nowrap;
+      }
+
+      .sb-upload-list-item-status-label {
+        position: absolute;
+        right: 5px;
+        top: 0;
+        line-height: inherit;
+      }
+
+      &:hover {
+        .sb-upload-list-item-name {
+          color: #409eff;
+        }
+
+        cursor: pointer;
+        background: #f5f7fa;
+      }
+
+      .sb-upload-list-item:first-child {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.tip {
+  text-size-adjust: 1px;
+  text-overflow: clip;
+  size: 1px;
+  font-size: small;
+}
