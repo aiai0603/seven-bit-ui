@@ -1,179 +1,174 @@
 <template>
-  <div class="test">
-    <sb-modal
-      v-model:visible="visible"
-      :mask="true"
-      title-align="center"
-      :width="600"
-      title="我是标题"
-      content="hello world!"
-      icon-type="none"
-      :closable="true"
-      :mask-closable="true"
-      :hide-cancel="false"
-      cancelText="cancel"
-      okText="confirm"
-      :footer="true"
-      :fullscreen="false"
-      :top="150"
-      :simple="false"
-      :ok-button-props="{ status: 'danger' }"
-      :cancel-button-props="{ round: true }"
-      mask-class="maskClass"
-      modal-class="modalClass"
-      :draggable="false"
-      @ok="okClick"
-      @cancel="cancelClick"
-      @before-open="beforeOpen"
-      @open="open"
-      @before-close="beforeClose"
-      @close="close"
-    >
-      <template #body> 哈哈哈哈哈 </template>
-    </sb-modal>
-    <sb-button @click="showModal">click</sb-button>
-    <br /><br />
-    <sb-button @click="show">click</sb-button>
-    <br /><br />
-    <hr />
-    <sb-progress width="50%" :percent="percent" :stroke-width="10" :color="colorObj"></sb-progress>
-    <br /><br />
-    <sb-progress :width="300" :percent="percent" :stroke-width="6"></sb-progress>
-    <br /><br />
-    <sb-progress width="50%" :percent="percent" color="#ff0000" track-color="#000"></sb-progress>
-    <br /><br />
-    <sb-progress width="50%" :stroke-width="13" :percent="percent" :size="size" :status="status"></sb-progress>
-    <select name="size" id="" v-model="size">
-      <option value="small">small</option>
-      <option value="medium">medium</option>
-      <option value="large">large</option>
-    </select>
-    <br /><br />
-    <sb-progress width="50%" :percent="percent" :show-text="false"></sb-progress>
-    <br /><br />
-    <sb-progress width="50%" :percent="percent" :status="status"></sb-progress>
-    <select name="status" id="" v-model="status">
-      <option value="normal">normal</option>
-      <option value="success">success</option>
-      <option value="warning">warning</option>
-      <option value="danger">danger</option>
-    </select>
-    <br /><br />
-    <sb-progress width="50%" :percent="percent" :round="false"></sb-progress>
-    <br /><br />
-    <sb-progress :width="150" :percent="percent" type="circle"></sb-progress>
-    <br /><br />
-    <sb-progress :width="150" :percent="percent" type="circle" color="#ff0000" track-color="#0000ff"></sb-progress>
-    <br /><br />
-    <sb-progress :width="150" :percent="percent" type="circle" :size="size" :status="status" :round="false"></sb-progress>
-    <br /><br />
-    <sb-progress :width="150" :percent="percent" type="circle" :color="colorObj"></sb-progress>
-    <br /><br />
-    <sb-button @click="percent += 0.1">+10</sb-button>
-    <sb-button style="margin-left: 10px" @click="percent -= 0.1">-10</sb-button>
-    <hr />
-    <sb-spin /><br />
-    <sb-spin :size="28" /><br />
-    <sb-spin :size="36" /><br />
-    <sb-spin :size="36" tip="This may take a while..." /><br />
-    <sb-spin :size="36">
-      <template #icon>
-        <sb-icon name="sync" style="color: orange"></sb-icon>
+  <div style="height: 100px">
+    <sb-drop-down @handleItemClick="test2" ref="drop" :autoClose="false" trigger="click">
+      <template #title>
+        展开试试看
+        <sb-icon name="down"></sb-icon>
       </template>
-    </sb-spin>
-    <br />
-    <br />
-    <sb-spin :size="36">
-      <template #icon>
-        <div class="element"></div>
+      <template #dropdown>
+        <sb-drop-down-menu title="测试标题">
+          <sb-drop-down-item value="1">按钮11111</sb-drop-down-item>
+          <sb-drop-down-item value="2" disabled>按钮11111</sb-drop-down-item>
+          <sb-drop-down-item value="3" divided>按钮11111</sb-drop-down-item>
+        </sb-drop-down-menu>
       </template>
-    </sb-spin>
-    <br />
-    <br />
-    <sb-spin :size="50" :loading="loading" dot tip="This may take a while..." /><br />
-    <br />
-    <br />
-    <sb-spin :size="30" :loading="loading" tip="This may take a while..." style="width: 50%">
-      <div class="container">
-        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, aliquam. Velit, sequi magnam. Ipsa odit eum totam consectetur perferendis voluptatum sapiente, voluptas, vel esse dolorem ipsam natus adipisci modi aut!</span>
-        <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla deleniti rem hic velit nihil delectus nisi modi quam dolores magni voluptatibus, aliquid ad, sit sapiente nam praesentium eos. Tempore, impedit.</span>
-      </div>
-    </sb-spin>
-    <br />
-    <br />
-    <sb-button @click="loading = !loading">click</sb-button>
+    </sb-drop-down>
   </div>
+  <div>
+    <sb-bread>
+      <sb-bread-item>111</sb-bread-item>
+      <sb-bread-item href="#">222</sb-bread-item>
+      <sb-bread-item>333</sb-bread-item>
+    </sb-bread>
+  </div>
+  <div>
+    <sb-button size="small"> 小按钮 </sb-button>
+    <sb-button> 默认按钮 </sb-button>
+    <sb-button size="large"> 大按钮 </sb-button>
+  </div>
+  <div>
+    <sb-button size="small" round> 小按钮 </sb-button>
+    <sb-button round> 默认按钮 </sb-button>
+    <sb-button size="large" round> 大按钮 </sb-button>
+  </div>
+  <div style="width: 300px">
+    <sb-button size="small" long> 长按钮 </sb-button>
+  </div>
+  <div>
+    <sb-button status="warning"> 警告 </sb-button>
+    <sb-button status="danger"> 危险 </sb-button>
+    <sb-button status="success"> 成功 </sb-button>
+    <sb-button status="secondary"> 次要 </sb-button>
+    <sb-button status="default"> 默认 </sb-button>
+  </div>
+  <div>
+    <sb-button status="warning" type="outline"> 中空 </sb-button>
+    <sb-button status="danger" type="outline"> 中空 </sb-button>
+    <sb-button status="success" type="outline"> 中空 </sb-button>
+    <sb-button status="secondary" type="outline"> 中空 </sb-button>
+    <sb-button type="outline"> 中空 </sb-button>
+  </div>
+  <div>
+    <sb-button status="warning" type="text"> 文字 </sb-button>
+    <sb-button status="danger" type="text"> 文字 </sb-button>
+    <sb-button status="success" type="text"> 文字 </sb-button>
+    <sb-button status="secondary" type="text"> 文字 </sb-button>
+    <sb-button type="text"> 文字 </sb-button>
+  </div>
+  <div>
+    <sb-button type="outline" disabled> 中空禁用 </sb-button>
+    <sb-button type="text" disabled> 文字禁用 </sb-button>
+    <sb-button disabled> 基础禁用 </sb-button>
+  </div>
+  <div>
+    <sb-button status="warning" type="outline" disabled> 中空禁用 </sb-button>
+    <sb-button status="warning" type="text" disabled> 文字禁用 </sb-button>
+    <sb-button status="warning" disabled> 基础禁用 </sb-button>
+  </div>
+  <div>
+    <sb-button status="danger" type="outline" disabled> 中空禁用 </sb-button>
+    <sb-button status="danger" type="text" disabled> 文字禁用 </sb-button>
+    <sb-button status="danger" disabled> 基础禁用 </sb-button>
+  </div>
+  <div>
+    <sb-button status="secondary" type="outline" disabled> 中空禁用 </sb-button>
+    <sb-button status="secondary" type="text" disabled> 文字禁用 </sb-button>
+    <sb-button status="secondary" disabled> 基础禁用 </sb-button>
+  </div>
+  <div>
+    <sb-button status="success" type="outline" disabled> 中空禁用 </sb-button>
+    <sb-button status="success" type="text" disabled> 文字禁用 </sb-button>
+    <sb-button status="success" disabled> 基础禁用 </sb-button>
+  </div>
+  <div> <sb-button @click="test(1, $event)"> 基础禁用 </sb-button> 计数是:{{ count }} </div>
+
+  <div>
+    <sb-link type="default" title="这是一个打开我们git的链接" href="https://github.com/aiai0603" target="_blank"> 这是一个默认链接 </sb-link>
+    <sb-link type="warning"> 这是一个警告链接 </sb-link>
+    <sb-link type="success"> 这是一个成功链接 </sb-link>
+    <sb-link type="error"> 这是一个错误链接 </sb-link>
+    <sb-link type="secondary"> 这是一个次级链接 </sb-link>
+  </div>
+  <div>
+    <sb-link type="default" disabled title="这是一个打开我们git的链接" href="https://github.com/aiai0603" target="_blank"> 这是一个默认链接 </sb-link>
+    <sb-link type="warning" disabled> 这是一个警告链接 </sb-link>
+    <sb-link type="success" disabled> 这是一个成功链接 </sb-link>
+    <sb-link type="error" disabled> 这是一个错误链接 </sb-link>
+    <sb-link type="secondary" disabled> 这是一个次级链接 </sb-link>
+  </div>
+  <div>
+    <sb-link type="default" underline title="这是一个打开我们git的链接" href="https://github.com/aiai0603" target="_blank"> 这是一个下划线链接 </sb-link>
+  </div>
+  <div>
+    <sb-icon name="exclaimination" class="test-icon" style="color: green" />
+    <sb-icon name="info-circle-fill" class="test-icon" style="color: blue" />
+    <sb-icon name="close-circle-fill" class="test-icon" />
+    <sb-icon name="warning-circle-fill" class="test-icon" style="color: red" />
+    <sb-icon name="close" class="test-icon" spin />
+  </div>
+  <sb-row align="center" justify="center" style="height: 200px" :gutter="20">
+    <sb-col :span="12">
+      <div class="demo"> A </div>
+    </sb-col>
+    <sb-col :span="12">
+      <div class="demo"> B </div>
+    </sb-col>
+  </sb-row>
+
+  <sb-row align="center" justify="center">
+    <sb-col :span="16" :xs="xs" :sm="sm" :md="md" :lg="lg" :xl="xl" :xxl="xxl">
+      <div class="demo"> A </div>
+    </sb-col>
+  </sb-row>
 </template>
 <script lang="ts" setup>
-import { ref } from 'vue';
-let visible = ref(false);
-let percent = ref(0.1);
-let size = ref('large');
-let status = ref('warning');
-let loading = ref(false);
-const colorObj = [
-  {
-    offset: '0%',
-    color: 'yellow'
-  },
-  {
-    offset: '100%',
-    color: 'orange'
-  }
-];
-const showModal = function () {
-  visible.value = true;
-};
+  import { onMounted, ref } from 'vue';
+  const xs = {
+    span: 2
+  };
+  const sm = {
+    span: 4
+  };
+  const md = {
+    span: 6
+  };
+  const lg = {
+    span: 8
+  };
+  const xl = {
+    span: 12
+  };
+  const xxl = {
+    span: 16
+  };
+  let count = ref(1);
+  const test = (num: number, e: Event) => {
+    console.log(e);
+    count.value += num;
+  };
 
-const okClick = (e: PointerEvent) => {
-  console.log('Ok Btn CLick');
-};
+  const test2 = (num: any) => {
+    console.log(num);
+  };
 
-const cancelClick = (e: PointerEvent) => {
-  console.log('Cancel Btn CLick');
-};
-
-const beforeOpen = () => console.log('before-open');
-
-const open = () => console.log('open');
-
-const beforeClose = () => console.log('before-close');
-
-const close = () => console.log('close');
+  const drop = ref(null);
 </script>
-
-<script lang="ts">
-import { sbModal } from 'seven-bit-ui';
-export default {
-  methods: {
-    show() {
-      sbModal.$error({
-        title: 'My Title',
-        content: 'This is a long long long content!',
-        onOk: () => {
-          console.log('okkkkk');
-        }
-      });
-    }
+<style>
+  body {
+    display: block;
+    margin: 0px;
   }
-};
-</script>
-
-<style scoped>
-.test::v-deep .maskClass {
-  background-color: rgba(0, 0, 0, 0.6);
-}
-
-.element {
-  width: 30px;
-  height: 30px;
-  background-color: red;
-}
-
-.container {
-  box-sizing: border-box;
-  padding: 20px 32px;
-  border: 10px solid lightblue;
-  border-radius: 5px;
-}
+  .demo {
+    height: 100px;
+    background-color: aquamarine;
+  }
+  .test-icon {
+    font-size: 40px;
+  }
+  .sb-button {
+    margin: 10px;
+  }
+  .sb-link {
+    margin: 10px;
+  }
 </style>
