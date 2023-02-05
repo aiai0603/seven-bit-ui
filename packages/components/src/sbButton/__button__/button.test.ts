@@ -34,6 +34,6 @@ describe('test Button', () => {
         round: 'true'
       }
     });
-    expect(wrapper.classes()).toContain('is-round');
+    expect(wrapper.classes()).toContain('sb-button-is-round');
   });
 });

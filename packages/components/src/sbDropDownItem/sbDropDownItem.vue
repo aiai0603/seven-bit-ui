@@ -17,7 +17,7 @@
       return false;
     }
     click && click(e);
-    if (autoClose.value) {
+    if (autoClose) {
       close && close();
     }
   };
