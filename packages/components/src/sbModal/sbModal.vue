@@ -4,7 +4,7 @@
       <div v-show="ifHasMask" :class="['sb-modal-mask', maskClass ?? '']"></div>
       <transition name="wrapper" @before-enter="beforeModalEnter" @after-enter="afterModalEnter" @before-leave="beforeModalLeave" @after-leave="afterModalLeave">
         <div v-show="visible" class="sb-modal-wrapper" @click="maskClose">
-          <div :class="{ 'sb-modal': true, [modalClass ?? '']: true, 'sb-modal-simple': simple }" :style="modalStyle">
+          <div :class="{ 'sb-modal': true, [modalClass ?? '']: true, 'sb-modal-simple': simple, 'sb-modal-fullscreen': fullscreen }" :style="modalStyle">
             <div v-dragger="draggable" class="sb-modal-header">
               <div :class="titleClass">
                 <span v-show="iconType !== 'none'" class="sb-modal-title-icon" :style="{ color: icon.color }">
