@@ -25,8 +25,7 @@ export const progressProps = {
     default: 0
   },
   strokeWidth: {
-    type: Number,
-    default: 4
+    type: Number
   },
   width: {
     type: [String, Number],

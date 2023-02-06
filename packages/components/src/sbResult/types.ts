@@ -15,7 +15,8 @@ export const resultProps = {
   },
   status: {
     type: String,
-    validator: (val: string) => ResultStatus.includes(val)
+    validator: (val: string) => ResultStatus.includes(val),
+    default: 'info'
   }
 };
 

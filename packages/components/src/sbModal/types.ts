@@ -34,7 +34,7 @@ export const modalProps = {
   },
   closable: {
     type: Boolean,
-    default: false
+    default: true
   },
   maskClosable: {
     type: Boolean,

@@ -7,7 +7,8 @@ describe('Props Test', () => {
   test('title test', () => {
     const wrapper = mount(sbResult, {
       propsData: {
-        title: 'test title'
+        title: 'test title',
+        status: 'info'
       }
     });
     expect(wrapper.find('.sb-result-title').text()).toBe('test title');
