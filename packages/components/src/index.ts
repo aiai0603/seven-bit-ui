@@ -28,7 +28,13 @@ import { default as sbDropDownMenu } from './sbDropDownMenu';
 
 import { default as sbDropDownItem } from './sbDropDownItem';
 
-const components = [sbButton, sbLink, sbIcon, sbCol, sbRow, sbBread, sbBreadItem, sbModal, sbProgress, sbSpin, sbResult, sbUpload, sbDropDown, sbDropDownMenu, sbDropDownItem];
+import { default as sbMenu } from './sbMenu';
+
+import { default as sbMenuItem } from './sbMenuItem';
+
+import { default as sbSubMenu } from './sbSubMenu';
+
+const components = [sbButton, sbLink, sbIcon, sbCol, sbRow, sbBread, sbBreadItem, sbModal, sbProgress, sbSpin, sbResult, sbUpload, sbDropDown, sbDropDownMenu, sbDropDownItem, sbMenu, sbMenuItem, sbSubMenu];
 export default {
   install: (app: any) => {
     for (const comkey in components) {
@@ -37,4 +43,4 @@ export default {
   }
 };
 
-export { sbButton, sbLink, sbIcon, sbCol, sbRow, sbModal, sbProgress, sbSpin, sbResult, sbBread, sbBreadItem, sbUpload, sbDropDown, sbDropDownMenu, sbDropDownItem };
+export { sbButton, sbLink, sbIcon, sbCol, sbRow, sbModal, sbProgress, sbSpin, sbResult, sbBread, sbBreadItem, sbUpload, sbDropDown, sbDropDownMenu, sbDropDownItem, sbMenu, sbMenuItem, sbSubMenu };

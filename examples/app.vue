@@ -1,6 +1,56 @@
 <template>
+  <div>
+    <sb-menu @handleItemClick="test2" defaultKey="1">
+      <sb-menu-item value="1">
+        <template #icon>
+          <sb-icon name="down"></sb-icon>
+        </template>
+        测试1
+      </sb-menu-item>
+      <sb-menu-item value="2" disabled>测试2</sb-menu-item>
+      <sb-menu-item value="3">测试3</sb-menu-item>
+    </sb-menu>
+  </div>
+  <div style="width: 200px">
+    <sb-button status="secondary" @click="testopen()"> 打开 </sb-button>
+    <sb-button @click="testclose()"> 关闭 </sb-button>
+    <sb-menu @handleItemClick="test2" defaultKey="1" mode="vertical" ref="me">
+      <sb-menu-item value="1">
+        <template #icon>
+          <sb-icon name="close"></sb-icon>
+        </template>
+        测试1
+      </sb-menu-item>
+      <sb-menu-item value="2" disabled>测试2</sb-menu-item>
+      <sb-sub-menu :defaultOpen="true" keys="3">
+        <template #title>
+          <sb-menu-item value="3-1">
+            <template #icon>
+              <sb-icon name="close"></sb-icon>
+            </template>
+            测试1
+          </sb-menu-item>
+        </template>
+        <sb-menu-item value="3-2">测试5</sb-menu-item>
+        <sb-sub-menu :defaultOpen="true" keys="3-3">
+          <template #title>
+            <sb-menu-item> 测试1 </sb-menu-item>
+          </template>
+          <sb-menu-item value="3-3-1">测试5</sb-menu-item>
+          <sb-menu-item value="3-3-2">测试6</sb-menu-item>
+        </sb-sub-menu>
+      </sb-sub-menu>
+      <sb-menu-item value="4">
+        <template #icon>
+          <sb-icon name="close"></sb-icon>
+        </template>
+        测试4
+      </sb-menu-item>
+    </sb-menu>
+  </div>
+
   <div style="height: 100px">
-    <sb-drop-down @handleItemClick="test2" ref="drop" :autoClose="false" trigger="click">
+    <sb-drop-down @handleItemClick="test2" ref="drop" trigger="click">
       <template #title>
         展开试试看
         <sb-icon name="down"></sb-icon>
@@ -152,6 +202,15 @@
   };
 
   const drop = ref(null);
+  const me = ref(null);
+
+  const testopen = () => {
+    me.value && (me.value as any).handleOpenMenu();
+  };
+
+  const testclose = () => {
+    me.value && (me.value as any).handleCloseMenu();
+  };
 </script>
 <style>
   body {

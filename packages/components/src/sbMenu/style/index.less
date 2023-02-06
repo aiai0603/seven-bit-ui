@@ -1,0 +1,40 @@
+.sb-menu {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  font-size: 14px;
+  line-height: 1.5715;
+  transition: all 0.2s linear;
+}
+
+.sb-menu-horizontal {
+  display: flex;
+  flex-wrap: nowrap;
+  border-bottom: solid 1px #e5e6eb;
+}
+
+.sb-menu-vertical {
+  display: flex;
+  flex-flow: column;
+  border-right: solid 1px #e5e6eb;
+  max-width: 100%;
+  transition: all 0.35s linear;
+}
+
+.sb-menu-horizontal .sb-menu-item {
+  justify-content: center;
+  align-items: center;
+}
+
+.sb-menu-vertical .sb-menu-item {
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.sb-menu-vertical.sb-menu-vertical-close {
+  max-width: 48px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: all 0.35s linear;
+}

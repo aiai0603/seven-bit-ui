@@ -1,0 +1,104 @@
+.sb-sub-mune {
+  display: inline-flex;
+  max-width: 100%;
+  flex-flow: column;
+}
+
+.sb-sub-mune-title {
+  display: inline-flex;
+  flex-flow: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 500;
+  margin: 0;
+  border-bottom: 2px solid transparent;
+  color: #4e5969;
+  height: 48px;
+  line-height: 48px;
+  max-width: 100%;
+  cursor: pointer;
+  transition: all 0.25s linear 0.1s;
+
+  &:hover {
+    background-color: #f2f3f5;
+    color: #4e5969;
+  }
+}
+
+.sb-sub-menu-slot {
+  opacity: 0;
+  height: 0;
+  z-index: -1;
+  padding: 0 16px;
+  transition: all 0.15s linear 0.1s;
+}
+
+.sb-sub-menu-arrow {
+  transform: rotate(0deg);
+  font-size: 14px;
+  padding: 0 8px;
+  transition: all 0.15s linear;
+  color: #86909c;
+}
+
+.sb-sub-menu-slot .sb-menu-item {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.sb-sub-mune > .sb-sub-mune-title > .sb-menu-item {
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+.sb-menu-vertical.sb-menu-vertical-close .sb-sub-menu-arrow {
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.25s linear 0.1s;
+}
+
+.sb-sub-mune.sb-sub-mune-active > .sb-sub-mune-title > .sb-sub-menu-arrow {
+  transform: rotate(180deg);
+  transition: all 0.15s linear;
+}
+
+.sb-sub-mune.sb-sub-mune-choose > .sb-sub-mune-title .sb-menu-item,
+.sb-sub-mune.sb-sub-mune-choose > .sb-sub-mune-title .sb-sub-menu-arrow {
+  color: #165dff;
+
+  &:hover {
+    background-color: transparent;
+    color: #165dff;
+  }
+}
+
+.sb-sub-mune.sb-sub-mune-active > .sb-menu-item-active {
+  color: #4e5969;
+
+  &:hover {
+    color: #4e5969;
+    background-color: transparent;
+  }
+}
+
+.sb-sub-mune.sb-sub-mune-active > .sb-sub-menu-slot {
+  height: 100%;
+  z-index: 100;
+  opacity: 1;
+  transition: all 0.5s linear;
+}
+
+.sb-sub-menu-slot .sb-menu-logo {
+  max-width: 0;
+  min-width: 0;
+  height: 100%;
+}
+
+.sb-menu-vertical.sb-menu-vertical-close .sb-sub-menu-slot {
+  opacity: 0;
+  height: 0;
+  z-index: -1;
+  transition: all 0.15s linear 0.1s;
+}
