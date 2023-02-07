@@ -4,11 +4,12 @@
     "jsx": "preserve",
     "strict": true,
     "target": "ES2015",
-    "module": "commonjs",
+    "module": "esnext",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "moduleResolution": "Node",
     "lib": ["esnext", "dom"],
+    "types": ["vite/client"],
     "paths": {
       "@/*": ["packages/components/src/*"]
     }
