@@ -1,51 +1,33 @@
-import t from "./sbAvatar/index.js";
-import s from "./sbButton/index.js";
-import p from "./sbLink/index.js";
-import i from "./sbModal/index.js";
-import b from "./sbProgress/index.js";
-import f from "./sbSpin/index.js";
-import n from "./sbResult/index.js";
-import e from "./sbIcon/index.js";
-import a from "./sbCol/index.js";
-import l from "./sbRow/index.js";
-import u from "./sbBread/index.js";
-import c from "./sbBreadItem/index.js";
-import d from "./sbUpload/index.js";
-import D from "./sbDropDown/index.js";
-import M from "./sbDropDownMenu/index.js";
-import w from "./sbDropDownItem/index.js";
-import I from "./sbMenu/index.js";
-import B from "./sbMenuItem/index.js";
-import k from "./sbSubMenu/index.js";
-import x from "./sbTable/index.js";
-import C from "./sbCard/index.js";
-const o = [t, x, C, s, p, e, a, l, u, c, i, b, f, n, d, D, M, w, I, B, k], N = {
-  install: (m) => {
-    for (const r in o)
-      m.component(o[r].__name, o[r]);
-  }
+import * as t from "./sbAvatar/index.js";
+import * as o from "./sbBread/index.js";
+import * as r from "./sbBreadItem/index.js";
+import * as d from "./sbButton/index.js";
+import * as m from "./sbCard/index.js";
+import * as x from "./sbCol/index.js";
+import * as a from "./sbDropDown/index.js";
+import * as p from "./sbDropDownItem/index.js";
+import * as b from "./sbDropDownMenu/index.js";
+import * as f from "./sbIcon/index.js";
+import * as $ from "./sbLink/index.js";
+import * as l from "./sbMenu/index.js";
+import * as u from "./sbMenuItem/index.js";
+import * as c from "./sbModal/index.js";
+import * as D from "./sbProgress/index.js";
+import * as M from "./sbResult/index.js";
+import * as w from "./sbRow/index.js";
+import * as I from "./sbSpin/index.js";
+import * as g from "./sbSubMenu/index.js";
+import * as j from "./sbTable/index.js";
+import * as B from "./sbUpload/index.js";
+const h = /* @__PURE__ */ Object.assign({ "./sbAvatar/index.ts": t, "./sbBread/index.ts": o, "./sbBreadItem/index.ts": r, "./sbButton/index.ts": d, "./sbCard/index.ts": m, "./sbCol/index.ts": x, "./sbDropDown/index.ts": a, "./sbDropDownItem/index.ts": p, "./sbDropDownMenu/index.ts": b, "./sbIcon/index.ts": f, "./sbLink/index.ts": $, "./sbMenu/index.ts": l, "./sbMenuItem/index.ts": u, "./sbModal/index.ts": c, "./sbProgress/index.ts": D, "./sbResult/index.ts": M, "./sbRow/index.ts": w, "./sbSpin/index.ts": I, "./sbSubMenu/index.ts": g, "./sbTable/index.ts": j, "./sbUpload/index.ts": B }), i = {}, k = {
+  install: (e) => {
+    Object.entries(h).forEach((s) => {
+      const n = s[0].split("/")[1];
+      i[n] = s[1].default, e.use(s[1].default);
+    });
+  },
+  ...i
 };
 export {
-  N as default,
-  t as sbAvatar,
-  u as sbBread,
-  c as sbBreadItem,
-  s as sbButton,
-  C as sbCard,
-  a as sbCol,
-  D as sbDropDown,
-  w as sbDropDownItem,
-  M as sbDropDownMenu,
-  e as sbIcon,
-  p as sbLink,
-  I as sbMenu,
-  B as sbMenuItem,
-  i as sbModal,
-  b as sbProgress,
-  n as sbResult,
-  l as sbRow,
-  f as sbSpin,
-  k as sbSubMenu,
-  x as sbTable,
-  d as sbUpload
+  k as default
 };
