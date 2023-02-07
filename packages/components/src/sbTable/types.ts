@@ -6,10 +6,9 @@ interface columnType {
   ellipsis?: Boolean;
   width?: String;
 }
-interface rowSelectionType {
+export interface rowSelectionType {
   type: String;
   showCheckedAll: Boolean;
-  onlyCurrent: Boolean;
 }
 const sizeList = ['mini', 'small', 'medium', 'large'];
 export const tableProps = {
