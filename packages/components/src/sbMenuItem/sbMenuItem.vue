@@ -30,7 +30,7 @@
   const styleClass = computed(() => {
     return {
       'sb-menu-item': true,
-      'sb-menu-item-active': activeKey.value == props.value,
+      'sb-menu-item-active': props.value && activeKey.value == props.value,
       'sb-menu-is-disabled': props.disabled
     };
   });

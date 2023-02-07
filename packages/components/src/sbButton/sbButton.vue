@@ -1,16 +1,14 @@
 <template>
-  <button :class="styleClass" v-bind="attrs" :disabled="props.disabled" @click="myClick">
+  <button :class="styleClass" v-bind="attrs" :disabled="props.disabled">
     <slot />
   </button>
 </template>
 <script lang="ts" setup>
   import './style/index.less';
-  import { computed, useAttrs, defineEmits } from 'vue';
+  import { computed, useAttrs } from 'vue';
   import { buttonProps } from './types';
   const props = defineProps(buttonProps);
   const attrs = useAttrs();
-
-  const emits = defineEmits(['click']);
 
   const styleClass = computed(() => {
     return {
@@ -23,8 +21,4 @@
       [`sb-button-size-${props.size}`]: props.size
     };
   });
-
-  const myClick = (e: Event) => {
-    emits('click', e);
-  };
 </script>

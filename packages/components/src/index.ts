@@ -34,7 +34,19 @@
 
 // import { default as sbSubMenu } from './sbSubMenu';
 
-// const components = [sbButton, sbLink, sbIcon, sbCol, sbRow, sbBread, sbBreadItem, sbModal, sbProgress, sbSpin, sbResult, sbUpload, sbDropDown, sbDropDownMenu, sbDropDownItem, sbMenu, sbMenuItem, sbSubMenu];
+// import { default as sbLayout } from './sbLayout';
+
+// import { default as sbHeader } from './sbHeader';
+
+// import { default as sbFooter } from './sbFooter';
+
+// import { default as sbAside } from './sbAside';
+
+// import { default as sbMain } from './sbMain';
+
+// import { default as sbBackTop } from './sbBackTop';
+
+// const components = [sbButton, sbLink, sbIcon, sbCol, sbRow, sbBread, sbBreadItem, sbModal, sbProgress, sbSpin, sbResult, sbUpload, sbDropDown, sbDropDownMenu, sbDropDownItem, sbMenu, sbMenuItem, sbSubMenu, sbLayout, sbHeader, sbFooter, sbAside, sbMain, sbBackTop];
 // export default {
 //   install: (app: any) => {
 //     for (const comkey in components) {
@@ -43,7 +55,7 @@
 //   }
 // };
 
-// export { sbButton, sbLink, sbIcon, sbCol, sbRow, sbModal, sbProgress, sbSpin, sbResult, sbBread, sbBreadItem, sbUpload, sbDropDown, sbDropDownMenu, sbDropDownItem, sbMenu, sbMenuItem, sbSubMenu };
+// export { sbButton, sbLink, sbIcon, sbCol, sbRow, sbModal, sbProgress, sbSpin, sbResult, sbBread, sbBreadItem, sbUpload, sbDropDown, sbDropDownMenu, sbDropDownItem, sbMenu, sbMenuItem, sbSubMenu, sbLayout, sbHeader, sbFooter, sbAside, sbMain, sbBackTop };
 
 // 批量注册
 
