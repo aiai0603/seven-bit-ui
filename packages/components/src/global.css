@@ -262,3 +262,9 @@
 body {
   line-height: 1.5;
 }
+
+@keyframes sb-loading-circle {
+  100% {
+    transform: rotate(360deg);
+  }
+}

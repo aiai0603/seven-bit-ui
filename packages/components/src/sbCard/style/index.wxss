@@ -1,0 +1,99 @@
+@import url('../../global.css');
+.sb-card-size-medium {
+  font-size: 14px;
+}
+.sb-card-size-medium .sb-card-header {
+  height: 46px;
+  padding: 10px 16px;
+}
+.sb-card-size-medium .sb-card-header-title,
+.sb-card-size-medium .sb-card-meta-title {
+  font-size: 16px;
+}
+.sb-card-size-medium .sb-card-header-extra {
+  font-size: 14px;
+}
+.sb-card-size-medium .sb-card-body {
+  padding: 16px;
+}
+.sb-card-size-small {
+  font-size: 14px;
+}
+.sb-card-size-small .sb-card-header {
+  height: 40px;
+  padding: 8px 16px;
+}
+.sb-card-size-small .sb-card-header-title,
+.sb-card-size-small .sb-card-meta-title {
+  font-size: 16px;
+}
+.sb-card-size-small .sb-card-header-extra {
+  font-size: 14px;
+}
+.sb-card-size-small .sb-card-body {
+  padding: 12px 16px;
+}
+.sb-spin {
+  display: inline-block;
+}
+.sb-card {
+  position: relative;
+  background: var(--color-bg-2);
+  border-radius: var(--border-radius-none);
+  transition: box-shadow 0.2s cubic-bezier(0, 0, 1, 1);
+}
+.sb-card .sb-card-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  overflow: hidden;
+  border-bottom: 1px solid var(--color-neutral-3);
+}
+.sb-card .sb-card-header .sb-card-header-title {
+  flex: 1;
+  color: var(--color-text-1);
+  font-weight: 500;
+  line-height: 1.5715;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.sb-card .sb-card-header .sb-card-header-extra {
+  color: rgb(var(--primary-6));
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.sb-card .sb-card-body {
+  color: var(--color-text-2);
+}
+.sb-card-loading {
+  text-align: center;
+}
+.sb-card-loading .sb-card-body {
+  overflow: hidden;
+  text-align: center;
+}
+.sb-spin-icon {
+  color: rgb(var(--primary-6));
+  font-size: 20px;
+}
+.sb-spin-icon .sb-icon-loading {
+  animation: sb-loading-circle 1s infinite cubic-bezier(0, 0, 1, 1);
+}
+.sb-icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  color: inherit;
+  font-style: normal;
+  vertical-align: -2px;
+  outline: none;
+  stroke: currentColor;
+}
+.sb-card-bordered {
+  border: 1px solid var(--color-neutral-3);
+  border-radius: var(--border-radius-small);
+}
