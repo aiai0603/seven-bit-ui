@@ -1,10 +1,10 @@
 node_modules
 /examples/node_modules
-/examples/components/*
-/packages/components/coverage
+examples/components/*
+packages/components/coverage
 **/dist
 **/transitpkg
 pnpm-lock.yaml
 /examples/app.vue
-/packages/components/dist/*
+packages/components/dist/*
 /packages/components/transitpkg/package.json
