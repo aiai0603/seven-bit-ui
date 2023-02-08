@@ -8,7 +8,7 @@
 </template>
 <script lang="ts" setup>
   import './style/index.less';
-  import { computed, onBeforeUnmount, onMounted, provide, ref, useAttrs } from 'vue';
+  import { computed, onMounted, provide, ref, useAttrs } from 'vue';
   import { menuProps } from './types';
   const props = defineProps(menuProps);
   const attrs = useAttrs();
@@ -21,8 +21,6 @@
 
   const menuActive = ref(false);
 
-  const subActive = ref<String[]>([]);
-
   const handleCloseMenu = () => {
     menuActive.value = true;
   };
@@ -31,14 +29,9 @@
     menuActive.value = false;
   };
 
-  const handleSubClick = (key: String) => {
-    subActive.value.push(key);
-  };
-
   const activeKey = ref<string | undefined>(undefined);
 
   provide('menuKey', { click: handleItemClick, activeKey: activeKey });
-  provide('subKey', { click: handleSubClick, activeKey: subActive });
 
   const styleClass = computed(() => {
     return {
@@ -52,27 +45,6 @@
 
   onMounted(() => {
     activeKey.value = props.defaultKey;
-    menu.value?.addEventListener(
-      'click',
-      () => {
-        while (subActive.value.length != 0) {
-          subActive.value.pop();
-        }
-      },
-      true
-    );
-  });
-
-  onBeforeUnmount(() => {
-    menu.value?.removeEventListener(
-      'click',
-      () => {
-        while (subActive.value.length != 0) {
-          subActive.value.pop();
-        }
-      },
-      true
-    );
   });
 
   defineExpose({

@@ -4,7 +4,7 @@
       <slot name="title"></slot>
       <sb-icon name="down" class="sb-sub-menu-arrow"></sb-icon>
     </div>
-    <div class="sb-sub-menu-slot" @click="handleSubClick">
+    <div class="sb-sub-menu-slot">
       <slot />
     </div>
   </div>
@@ -12,29 +12,17 @@
 <script lang="ts" setup>
   import './style/index.less';
   import '../sbIcon';
-  import { computed, inject, onMounted, ref, useAttrs } from 'vue';
+  import { computed, onMounted, ref, useAttrs } from 'vue';
   import { subMenuProps } from './types';
   const props = defineProps(subMenuProps);
   const attrs = useAttrs();
 
   const subActive = ref(false);
 
-  const subContext = inject('subKey');
-  const click = subContext ? (subContext as any).click : undefined;
-
-  const handleSubClick = () => {
-    if (!props.keys) {
-      return false;
-    }
-    click && click(props.keys);
-  };
-  const activeKey = subContext && (subContext as any).activeKey;
-
   const styleClass = computed(() => {
     return {
       'sb-sub-mune': true,
-      'sb-sub-mune-active': subActive.value,
-      'sb-sub-mune-choose': activeKey.value && activeKey.value.indexOf(props.keys) >= 0
+      'sb-sub-mune-active': subActive.value
     };
   });
 

@@ -4,9 +4,9 @@
   </svg>
 </template>
 <script lang="ts" setup>
-  import './font/iconfont.js';
+  import loadIcon from './font/iconfont';
   import './style/index.less';
-  import { computed, useAttrs } from 'vue';
+  import { computed, onMounted, useAttrs } from 'vue';
   import { iconProps } from './types';
   const props = defineProps(iconProps);
   const attrs = useAttrs();
@@ -20,5 +20,9 @@
       'sb-icon': true,
       'sb-icon-is-spin': props.spin
     };
+  });
+
+  onMounted(() => {
+    loadIcon();
   });
 </script>
