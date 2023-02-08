@@ -1,4 +1,3 @@
-@import url('../../global.css');
 .sb-card-size-medium {
   font-size: 14px;
 }
