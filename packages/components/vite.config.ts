@@ -78,10 +78,9 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       less: {
-        modifyVars: {
-          hack: `true; @import (reference) "${resolve('src/global.css')}";`
-        },
-        javascriptEnabled: true
+        additionalData: `
+          @import "@/style/global.less";
+        `
       }
     }
   },
