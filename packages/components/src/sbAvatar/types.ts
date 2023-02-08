@@ -35,4 +35,4 @@ export const avatarProps = {
   }
 };
 
-export type ButtonProps = ExtractPropTypes<typeof avatarProps>;
+export type AvatarProps = ExtractPropTypes<typeof avatarProps>;
