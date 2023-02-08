@@ -5,6 +5,5 @@ examples/node_modules
 **/transitpkg
 pnpm-lock.yaml
 examples/app.vue
-packages/components/dist/es/index.js
-packages/components/dist/lib/index.js
+packages/components/dist/*
 packages/components/transitpkg/package.json
