@@ -14,7 +14,17 @@ export const cardProps = {
     type: String,
     value: ['small', 'medium'],
     default: 'medium'
-  }
+  },
+  hoverable: {
+    type: Boolean,
+    default: false
+  },
+  title: {
+    type: String,
+    default: ''
+  },
+  ['header-style']: {},
+  ['body-style']: {}
 };
 
 export type CardProps = ExtractPropTypes<typeof cardProps>;

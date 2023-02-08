@@ -69,9 +69,6 @@
 .sb-card .sb-card-body {
   color: var(--color-text-2);
 }
-.sb-card-loading {
-  text-align: center;
-}
 .sb-card-loading .sb-card-body {
   overflow: hidden;
   text-align: center;
@@ -91,9 +88,20 @@
   font-style: normal;
   vertical-align: -2px;
   outline: none;
-  stroke: currentColor;
+  stroke: currentcolor;
 }
 .sb-card-bordered {
   border: 1px solid var(--color-neutral-3);
   border-radius: var(--border-radius-small);
+}
+.sb-card-hoverable {
+  transition: all 0.3s;
+}
+.sb-card-hoverable:hover {
+  box-shadow: 0 8px 16px 0 rgba(48, 55, 66, 0.15);
+  transform: translate(0, -5px);
+}
+.sb-card-cover {
+  overflow: hidden;
+  border-radius: var(--border-radius-small) var(--border-radius-small) 0 0;
 }
