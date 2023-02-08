@@ -1,5 +1,5 @@
 <template>
-  <div :class="styleClass" @click="Click">
+  <div :class="styleClass" :style="style" @click="Click">
     <span v-if="!imgUrl" class="sb-avatar-text">kif</span>
     <span v-else class="sb-avatar-image">
       <div v-if="imgUrl === '1'" class="sb-avatar-image-icon">
@@ -23,8 +23,13 @@
   import { computed, defineEmits, onMounted, ref } from 'vue';
   import { avatarProps } from './types';
   const props = defineProps(avatarProps);
-  const fontSize = props.size / 2 + 'px';
-  const heightAndWidth = props.size + 'px';
+  const style = computed(() => {
+    return {
+      fontSize: props.size / 2 + 'px',
+      width: props.size + 'px',
+      height: props.size + 'px'
+    };
+  });
   const styleClass = computed(() => {
     return {
       'sb-avatar': true,
@@ -60,10 +65,3 @@
     }
   });
 </script>
-<style lang="less">
-  .sb-avatar {
-    font-size: v-bind('fontSize');
-    width: v-bind('heightAndWidth');
-    height: v-bind('heightAndWidth');
-  }
-</style>
