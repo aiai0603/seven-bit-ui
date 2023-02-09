@@ -134,6 +134,10 @@ export const drawerProps = {
     type: Boolean,
     default: true
   },
+  body: {
+    type: Boolean,
+    default: true
+  },
   footer: {
     type: Boolean,
     default: true
