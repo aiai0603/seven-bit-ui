@@ -12,7 +12,10 @@
 </template>
 <script lang="ts" setup>
   import './style/index.less';
-  import sbIcon from '../index';
+  // import sbIcon from '../index';
+  //上述index 引入方式导致打包后 Uncaught ReferenceError: can't access lexical declaration 'u' before initialization
+  import sbIcon from '../sbIcon';
+
   import { inject, toRefs } from 'vue';
   import { breadItemProps } from './types';
   const props = defineProps(breadItemProps);
