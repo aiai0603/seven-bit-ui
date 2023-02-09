@@ -1,0 +1,177 @@
+.sb-switch {
+  position: relative;
+  box-sizing: border-box;
+  min-width: 40px;
+  height: 24px;
+  padding: 0;
+  overflow: hidden;
+  line-height: 24px;
+  vertical-align: middle;
+  background-color: rgb(201, 205, 212);
+  border: none;
+  border-radius: 12px;
+  outline: none;
+  cursor: pointer;
+  transition: background-color .2s cubic-bezier(.34, .69, .1, 1);
+
+  .sb-switch-handle {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    color: rgb(229, 230, 235);
+    font-size: 12px;
+    background-color: #fff;
+    border-radius: 50%;
+    transition: all .2s cubic-bezier(.34, .69, .1, 1);
+  }
+
+  .sb-switch-text-holder {
+    margin: 0 8px 0 26px;
+    font-size: 12px;
+    opacity: 0;
+  }
+
+  .sb-switch-text {
+    position: absolute;
+    top: 0;
+    left: 26px;
+    color: #ffffff;
+    font-size: 12px;
+  }
+}
+
+// 状态样式
+.sb-switch-checked {
+  background-color: rgb(22, 93, 255);
+
+  .sb-switch-handle {
+    left: calc(100% - 20px);
+    color: rgb(22, 93, 255);
+  }
+
+  &:after {
+    background-color: rgb(22, 93, 255);
+  }
+
+  .sb-switch-text-holder {
+    margin: 0 26px 0 8px;
+  }
+
+  .sb-switch-text {
+    left: 8px;
+    color: #ffffff;
+  }
+}
+
+// 不同类型
+.sb-switch-type-round {
+  min-width: 40px;
+  border-radius: 2px;
+
+  .sb-switch-handle {
+    border-radius: 2px;
+  }
+}
+
+.sb-switch-type-line {
+  min-width: 36px;
+  overflow: unset;
+  background-color: transparent;
+
+  .sb-switch-handle {
+    top: 2px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgb(134, 144, 156);
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-color: rgb(201, 205, 212);
+    border-radius: 3px;
+    transition: background-color .2s cubic-bezier(.34, .69, .1, 1);
+  }
+}
+
+.sb-switch-type-line.sb-switch-checked {
+  background-color: initial;
+
+  .sb-switch-handle {
+    left: calc(100% - 20px);
+    color: rgb(22, 93, 255);
+  }
+
+  &:after {
+    background-color: rgb(22, 93, 255);
+  }
+}
+
+// 尺寸样式
+.sb-switch-small {
+  min-width: 28px;
+  height: 16px;
+  line-height: 16px;
+
+  .sb-switch-handle {
+    top: 2px;
+    left: 2px;
+    width: 12px;
+    height: 12px;
+    border-radius: 8px;
+
+    .sb-switch-handle-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(.66667);
+    }
+  }
+}
+
+.sb-switch-type-round.sb-switch-small {
+  border-radius: 2px;
+
+  .sb-switch-handle {
+    border-radius: 1px;
+  }
+}
+
+.sb-switch-type-line.sb-switch-small .sb-switch-handle {
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+
+  .sb-switch-handle-icon {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.sb-switch-small.sb-switch-checked {
+  .sb-switch-handle {
+    left: calc(100% - 12px - 2px);
+  }
+}
+
+// 加载中样式
+.sb-switch-loading {
+  background-color: rgb(242, 243, 245);
+  cursor: not-allowed;
+}
+
+.sb-switch .sb-swtich-spin .sb-spin-icon-spinning {
+  stroke: rgb(229, 230, 235);
+  transform: translateY(1px);
+}
