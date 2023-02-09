@@ -52,6 +52,8 @@ import { default as sbCard } from './sbCard';
 
 import { default as sbTable } from './sbTable';
 
+import { default as sbSwitch } from './sbSwitch';
+
 import { default as sbAlert } from './sbAlert';
 
 import { default as sbDrawer } from './sbDrawer';
@@ -86,6 +88,7 @@ const components = [
   sbMain,
   sbBackTop,
   sbAvatar,
+  sbSwitch,
   sbAlert,
   sbDrawer,
   sbInput
@@ -126,6 +129,7 @@ export {
   sbMain,
   sbBackTop,
   sbAvatar,
+  sbSwitch,
   sbAlert,
   sbDrawer,
   sbInput

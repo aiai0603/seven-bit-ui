@@ -6,8 +6,8 @@ const ProgressSize = ['small', 'medium', 'large'];
 
 const ProgressStatus = ['normal', 'success', 'warning', 'danger'];
 
-const colorReg1 = /^rgb\((\s*?)\d{1,3}(\s*?)\,(\s*?)\d{1,3}(\s*?)\,(\s*?)\d{1,3}\)$/;
-const colorReg2 = /^#([a-zA-Z0-9]{3}|[a-zA-Z0-9]{6})$/;
+export const colorReg1 = /^rgb\((\s*?)\d{1,3}(\s*?)\,(\s*?)\d{1,3}(\s*?)\,(\s*?)\d{1,3}\)$/;
+export const colorReg2 = /^#([a-zA-Z0-9]{3}|[a-zA-Z0-9]{6})$/;
 
 export const progressProps = {
   type: {

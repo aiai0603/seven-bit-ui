@@ -12,7 +12,7 @@
                 <slot name="title">{{ title }}</slot>
               </div>
               <div v-if="closable" role="button" class="sb-drawer-close-btn" @click="handleCancel">
-                <span class="sb-icon-hover">
+                <span class="sb-drawer-icon-hover">
                   <sb-icon name="close" @click="onIconClick"></sb-icon>
                 </span>
               </div>
