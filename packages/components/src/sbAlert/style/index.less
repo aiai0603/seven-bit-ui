@@ -1,0 +1,92 @@
+.sb-alert {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height:50%;
+  padding: 8px 15px;
+  overflow: hidden;
+  font-size: 14px;
+  line-height: 1.5715;
+  text-align: left;
+  border-radius: 3px;
+}
+
+.sb-alert-icon {
+  margin-right: 8px;
+}
+
+.sb-alert-body {
+  position: relative;
+  flex: 1;
+}
+
+.sb-alert-with-title {
+  align-items: flex-start;
+  padding: 15px;
+}
+
+.sb-alert-title {
+  margin-bottom: 4px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+
+
+.sb-alert-success {
+  background-color: rgb(232 255 234);
+  border: 1px solid transparent;
+}
+
+.sb-alert-warning {
+  background-color: rgb(255 247 232);
+  border: 1px solid transparent;
+}
+
+.sb-alert-error {
+  background-color: rgb(255 236 232);
+  border: 1px solid transparent;
+}
+
+.sb-alert-normal {
+  background-color: rgb(242 243 245);
+  border: 1px solid transparent;
+}
+
+
+.sb-alert-info {
+  background-color: rgb(232 243 255);
+  border: 1px solid transparent;
+
+  .sb-alert-title {
+    color:  rgb(29 33 41);
+  }
+
+  .sb-alert-content {
+    color: rgb(78 89 105);
+  }
+}
+
+.sb-alert-close-btn {
+  top: 4px;
+  right: 0;
+  box-sizing: border-box;
+  margin-left: 8px;
+  padding: 0;
+  color: rgb(78 89 105);
+  font-size: 12px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: color .1s cubic-bezier(0,0,1,1);
+}
+
+.sb-icon-hover {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  line-height: 12px;
+}

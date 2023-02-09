@@ -4,7 +4,7 @@
   </svg>
 </template>
 <script lang="ts" setup>
-  import loadIcon from './font/iconfont';
+  // import loadIcon from './font/iconfont';
   import './style/index.less';
   import { computed, onMounted, useAttrs } from 'vue';
   import { iconProps } from './types';
@@ -23,6 +23,6 @@
   });
 
   onMounted(() => {
-    loadIcon();
+    // loadIcon();
   });
 </script>
