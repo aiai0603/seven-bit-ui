@@ -1,6 +1,6 @@
 import type { ExtractPropTypes } from 'vue';
 
-export const LinkType = ['warning', 'error', 'success', 'secondary', 'default', 'secondary'];
+export const LinkType = ['warning', 'error', 'success', 'secondary', 'default'];
 
 export const linkProps = {
   type: {

@@ -12,7 +12,7 @@
 </template>
 <script lang="ts" setup>
   import './style/index.less';
-  import sbIcon from '../index';
+  import '../sbIcon';
   import { inject, toRefs } from 'vue';
   import { breadItemProps } from './types';
   const props = defineProps(breadItemProps);

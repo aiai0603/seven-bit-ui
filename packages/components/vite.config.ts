@@ -75,6 +75,15 @@ export default defineConfig({
       }
     }
   ],
+  css: {
+    preprocessorOptions: {
+      less: {
+        additionalData: `
+          @import "@/style/global.less";
+        `
+      }
+    }
+  },
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src')
