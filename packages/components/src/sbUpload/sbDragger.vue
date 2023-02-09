@@ -1,8 +1,9 @@
 <template>
   <div ref="fileArea" class="sb-upload-dragger" :class="{ ['sb-upload-draggerenter']: isEnter }" @click="emits('fileUpload')">
     <div class="sb-upload-content">
-      <!-- <icon class="k-upload-icon" :name="isEnter ? 'file-open' : 'folder-close'" /> -->
-      <div class="sb-upload-dragger-text"> 将文件拖到此处或<em>点击上传</em> <br /><p style="font-size: 10px">Only doc/docx/pdf types are accepted</p></div>
+      <!-- <sb-icon class="sb-upload-icon" name="info-circle-fill"></sb-icon> -->
+      <!-- <sb-link type="default" :name="isEnter ? 'file-open' : 'folder-close'">点击上传</sb-link> -->
+      <div class="sb-upload-dragger-text"> 将文件拖到此处或<sb-link>点击上传</sb-link> <br /><p style="font-size: 10px">Only doc/docx/pdf types are accepted</p></div>
     </div>
   </div>
 </template>
@@ -10,7 +11,6 @@
 <script setup lang="ts">
   import './style/drag.less';
   import { ref, onMounted } from 'vue';
-  // import Icon from '../icon/icon.vue';
   const emits = defineEmits(['getfileslist', 'fileUpload']);
   // 通过ref属性在组件创建完成后进行事件监听
   const fileArea = ref();
