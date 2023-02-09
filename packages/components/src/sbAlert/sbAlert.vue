@@ -28,7 +28,7 @@
         @click="handleClose"
       >
         <slot name="close-element">
-          <span class="sb-icon-hover">
+          <span class="sb-alert-icon-hover">
             <sb-icon name="close" @click="onIconClick"></sb-icon>
           </span>
         </slot>

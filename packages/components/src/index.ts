@@ -52,7 +52,38 @@ import { default as sbCard } from './sbCard';
 
 import { default as sbTable } from './sbTable';
 
-const components = [sbCard, sbTable, sbButton, sbLink, sbIcon, sbCol, sbRow, sbBread, sbBreadItem, sbModal, sbProgress, sbSpin, sbResult, sbUpload, sbDropDown, sbDropDownMenu, sbDropDownItem, sbMenu, sbMenuItem, sbSubMenu, sbLayout, sbHeader, sbFooter, sbAside, sbMain, sbBackTop, sbAvatar];
+import { default as sbSwitch } from './sbSwitch';
+
+const components = [
+  sbCard,
+  sbTable,
+  sbButton,
+  sbLink,
+  sbIcon,
+  sbCol,
+  sbRow,
+  sbBread,
+  sbBreadItem,
+  sbModal,
+  sbProgress,
+  sbSpin,
+  sbResult,
+  sbUpload,
+  sbDropDown,
+  sbDropDownMenu,
+  sbDropDownItem,
+  sbMenu,
+  sbMenuItem,
+  sbSubMenu,
+  sbLayout,
+  sbHeader,
+  sbFooter,
+  sbAside,
+  sbMain,
+  sbBackTop,
+  sbAvatar,
+  sbSwitch
+];
 export default {
   install: (app: any) => {
     for (const comkey in components) {
@@ -61,7 +92,7 @@ export default {
   }
 };
 
-export { sbCard, sbTable, sbButton, sbLink, sbIcon, sbCol, sbRow, sbModal, sbProgress, sbSpin, sbResult, sbBread, sbBreadItem, sbUpload, sbDropDown, sbDropDownMenu, sbDropDownItem, sbMenu, sbMenuItem, sbSubMenu, sbLayout, sbHeader, sbFooter, sbAside, sbMain, sbBackTop, sbAvatar };
+export { sbCard, sbTable, sbButton, sbLink, sbIcon, sbCol, sbRow, sbModal, sbProgress, sbSpin, sbResult, sbBread, sbBreadItem, sbUpload, sbDropDown, sbDropDownMenu, sbDropDownItem, sbMenu, sbMenuItem, sbSubMenu, sbLayout, sbHeader, sbFooter, sbAside, sbMain, sbBackTop, sbAvatar, sbSwitch };
 // 批量注册
 
 // import type { App } from 'vue';

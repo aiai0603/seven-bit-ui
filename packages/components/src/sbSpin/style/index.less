@@ -33,7 +33,18 @@
     justify-content: center;
     align-items: center;
 
-    .sb-icon-spin > *:first-child {
+    .sb-spin-icon-loading {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      color: inherit;
+      font-style: normal;
+      vertical-align: -2px;
+      outline: none;
+      stroke: rgb(22 93 255);
+    }
+    
+    .sb-spin-icon-spinning > *:first-child {
       transform-origin: 50% 50%;
       animation: sb-loading-circle 1s infinite cubic-bezier(0, 0, 1, 1);
     }
@@ -47,20 +58,9 @@
         transform: rotate(360deg);
       }
     }
-
-    .sb-icon-loading {
-      display: inline-block;
-      width: 1em;
-      height: 1em;
-      color: inherit;
-      font-style: normal;
-      vertical-align: -2px;
-      outline: none;
-      stroke: rgb(22 93 255);
-    }
   }
 
-  .sb-dot-loading {
+  .sb-spin-dot-loading {
     position: relative;
     display: inline-block;
     width: 56px;
@@ -68,7 +68,7 @@
     transform-style: preserve-3d;
     perspective: 200px;
 
-    .sb-dot-loading-item {
+    .sb-spin-dot-loading-item {
       position: absolute;
       top: 0;
       left: 50%;
@@ -80,22 +80,22 @@
       animation: sb-dot-loading 2s cubic-bezier(0, 0, 1, 1) infinite forwards;
     }
 
-    .sb-dot-loading-item:nth-child(2) {
+    .sb-spin-dot-loading-item:nth-child(2) {
       background-color: rgb(64 128 255);
       animation-delay: 0.4s;
     }
 
-    .sb-dot-loading-item:nth-child(3) {
+    .sb-spin-dot-loading-item:nth-child(3) {
       background-color: rgb(106 161 255);
       animation-delay: 0.8s;
     }
 
-    .sb-dot-loading-item:nth-child(4) {
+    .sb-spin-dot-loading-item:nth-child(4) {
       background-color: rgb(106 161 255);
       animation-delay: 1.2s;
     }
 
-    .sb-dot-loading-item:nth-child(5) {
+    .sb-spin-dot-loading-item:nth-child(5) {
       background-color: rgb(190 218 255);
       animation-delay: 1.6s;
     }
