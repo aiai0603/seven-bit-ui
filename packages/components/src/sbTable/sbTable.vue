@@ -204,10 +204,3 @@
     selectData
   });
 </script>
-<style lang="less" scoped>
-  .ellipsis span {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-</style>

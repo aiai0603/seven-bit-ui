@@ -4,6 +4,12 @@
   display: inline-block;
 }
 
+.ellipsis span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .sb-table-th {
   transition: background-color 0.1s cubic-bezier(0, 0, 1, 1);
   position: relative;
@@ -243,7 +249,7 @@ ul {
   padding-left: 0;
 }
 
-.sb-checkbox > input[type='checkbox'] {
+.sb-checkbox>input[type='checkbox'] {
   position: absolute;
   top: 0;
   left: 0;
