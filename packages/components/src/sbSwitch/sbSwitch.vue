@@ -47,6 +47,7 @@ const switchClass = computed(() => {
     'sb-switch-checked': props.loading ? false : checked.value,
     [`sb-switch-${props.size}`]: true,
     [`sb-switch-loading`]: loading.value,
+    [`sb-switch-disabled`]: props.disabled,
   };
 });
 
@@ -54,7 +55,7 @@ const currentBgColor = computed(() => (checked.value ? props.checkedColor : prop
 
 // 事件
 const change = async () => {
-  if (loading.value) return;
+  if (props.disabled || loading.value) return;
   const stauts = checked.value, beforeChange = props.beforeChange;
   if (beforeChange) {
     loading.value = true;

@@ -29,7 +29,11 @@ export const switchProps = {
     type: Boolean,
     default: false
   },
-  beforeChange: Function
+  beforeChange: Function,
+  disabled: {
+    type: Boolean,
+    default: false
+  }
 };
 
 export type SwitchProps = ExtractPropTypes<typeof switchProps>;
