@@ -9,7 +9,7 @@ export const alertProps = {
     validator(value: string) {
       return AlertType.includes(value);
     },
-    default: 'normal'
+    default: 'info'
   },
   showIcon: {
     type: Boolean,

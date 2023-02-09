@@ -20,7 +20,7 @@
             <div class="sb-drawer-body">
               <slot name="body">{{ content }}</slot>
             </div>
-            <div class="sb-drawer-footer">
+            <div v-if="footer" class="sb-drawer-footer">
               <div class="footer">
                 <sb-button v-if="!hideCancel" v-bind="cancelButtonProps" :type="cancelButtonAttributes.type" :size="cancelButtonAttributes.size" :status="cancelButtonAttributes.status" :round="cancelButtonAttributes.round" :disabled="cancelButtonAttributes.round" :long="cancelButtonAttributes.long" @click="handleCancel">取消</sb-button>
                 <sb-button v-bind="okButtonProps" :type="okButtonAttributes.type" :size="okButtonAttributes.size" :status="okButtonAttributes.status" :round="okButtonAttributes.round" :disabled="okButtonAttributes.disabled" :long="okButtonAttributes.long" @click="handleOk">确定</sb-button>
@@ -43,6 +43,7 @@
   const props = defineProps(drawerProps);
   const emits = defineEmits(['update:visible', 'ok', 'cancel', 'open', 'close', 'beforeOpen', 'beforeClose', 'icon-click']);
 
+  //const emits = defineEmits<{'update:visible': (visible: boolean) => true, 'ok': () => true,'cancel': () => true,'open': () => true,'close': () => true,}>()
   // 属性
 
   const visible = computed({
