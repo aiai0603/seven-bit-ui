@@ -123,14 +123,14 @@
   height: 16px;
   line-height: 16px;
 
-  .sb-switch-small.sb-switch-handle {
+  .sb-switch-handle {
     top: 2px;
     left: 2px;
     width: 12px;
     height: 12px;
     border-radius: 8px;
 
-    .sb-switch-small.sb-switch-handle.sb-switch-handle-icon {
+    .sb-switch-handle-icon {
       position: absolute;
       top: 50%;
       left: 50%;
@@ -147,7 +147,7 @@
   }
 }
 
-.sb-switch-small .sb-switch-handle .sb-switch-type-line {
+.sb-switch-small.sb-switch-type-line .sb-switch-handle  {
   top: 0;
   left: 0;
   width: 16px;
@@ -159,8 +159,8 @@
   }
 }
 
-.sb-switch-small.sb-switch-handle.sb-switch-checked {
-    left: calc(100% - 12px - 2px);
+.sb-switch-small.sb-switch-checked .sb-switch-handle  {
+  left: calc(100% - 12px - 2px);
 }
 
 // 加载中样式
@@ -182,4 +182,23 @@
 .sb-switch-disabled {
   background-color: rgb(242 243 245);
   cursor: not-allowed;
+
+}
+
+.sb-switch-type-line.sb-switch-disabled {
+  &::after {
+    background-color: rgb(242 243 245);
+  }
+}
+
+.sb-switch-disabled.sb-switch-checked {
+  background-color: rgb(148, 191, 255);
+  cursor: not-allowed;
+
+}
+
+.sb-switch-type-line.sb-switch-disabled.sb-switch-checked {
+  &::after {
+    background-color: rgb(148, 191, 255);
+  }
 }
