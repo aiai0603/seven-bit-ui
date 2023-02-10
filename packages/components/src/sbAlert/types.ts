@@ -3,6 +3,7 @@ import type { ExtractPropTypes } from 'vue';
 export const AlertType = ['info', 'success', 'warning', 'error'];
 
 export const alertProps = {
+  content:String,
   visible: Boolean,
   type: {
     type: String,
