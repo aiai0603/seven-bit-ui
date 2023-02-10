@@ -80,18 +80,18 @@ export const drawerProps = {
 
   visible: {
     type: Boolean,
-    default: undefined
+    default: undefined,
   },
   width: {
     type: [Number, String],
-    default: 250
+    default:250
   },
   height: {
     type: [Number, String],
-    default: 250
+    default:250,
   },
   drawerStyle: {
-    type: Object as PropType<CSSProperties>
+    type: Object as PropType<CSSProperties>,
   },
   top: {
     type: [Number, String]
@@ -111,7 +111,6 @@ export const drawerProps = {
     type: Boolean,
     default: true
   },
-
   maskClosable: {
     type: Boolean,
     default: true
@@ -174,7 +173,7 @@ export const drawerProps = {
   },
   renderToBody: {
     type: Boolean,
-    default: true
+    default: true,
   },
 
   draggable: {
