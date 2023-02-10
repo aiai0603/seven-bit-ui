@@ -1,18 +1,20 @@
 <template>
   <div class="sb-upload">
     <input v-show="false" ref="sbIpt" type="file" :multiple="props.multiple" :accept="props.accept" @change="getFiles" />
-    <div v-if="!props.drag" @click="fileUpload">
-      <slot />
+    <div v-if="!props.drag" class="ipt" @click="fileUpload">
+      <slot name="button">
+        <sb-button>点击上传</sb-button>
+      </slot>
     </div>
-    <dragger v-else @getfileslist="getfileslist" @fileupload="fileUpload"></dragger>
+    <dragger v-else @getfileslist="getfileslist" @fileupload="fileUpload" @click="fileUpload"></dragger>
     <div class="sb-upload-list">
       <div v-for="(item, index) in filesList" :key="index" class="sb-upload-list-item" width="100px">
         <div class="sb-upload-list-item-name">
           {{ item.name }}
         </div>
-        <!-- <div class="sb-upload-list-item-status-label">
-          <icon name="ashbin" @click="delFile(index)" />
-        </div> -->
+        <div class="sb-upload-list-item-status-label">
+          <sb-icon name="close-circle-fill" @click="delFile(index)"></sb-icon>
+        </div>
       </div>
     </div>
     <!-- <div class="tip">文件允许上传doc/docx/pdf格式文件</div> -->
@@ -45,13 +47,23 @@
     emits('getfileslist', filesList.value);
   };
 
-  // const delFile = (index: number) => {
-  //   filesList.value.splice(index, 1);
-  //   emits('getfileslist', filesList.value);
-  // };
+  const delFile = (index: number) => {
+    filesList.value.splice(index, 1);
+    emits('getfileslist', filesList.value);
+  };
 
   const getfileslist = (file: File[]) => {
     filesList.value = file;
     emits('getfileslist', file);
+  };
+</script>
+<script lang="ts">
+  import sbButton from '../sbButton';
+  import sbIcon from '../sbIcon';
+  export default {
+    components: {
+      sbButton,
+      sbIcon
+    }
   };
 </script>

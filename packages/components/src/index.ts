@@ -54,6 +54,12 @@ import { default as sbTable } from './sbTable';
 
 import { default as sbSwitch } from './sbSwitch';
 
+import { default as sbAlert } from './sbAlert';
+
+import { default as sbDrawer } from './sbDrawer';
+
+import { default as sbInput } from './sbInput';
+
 const components = [
   sbCard,
   sbTable,
@@ -82,7 +88,10 @@ const components = [
   sbMain,
   sbBackTop,
   sbAvatar,
-  sbSwitch
+  sbSwitch,
+  sbAlert,
+  sbDrawer,
+  sbInput
 ];
 export default {
   install: (app: any) => {
@@ -92,7 +101,39 @@ export default {
   }
 };
 
-export { sbCard, sbTable, sbButton, sbLink, sbIcon, sbCol, sbRow, sbModal, sbProgress, sbSpin, sbResult, sbBread, sbBreadItem, sbUpload, sbDropDown, sbDropDownMenu, sbDropDownItem, sbMenu, sbMenuItem, sbSubMenu, sbLayout, sbHeader, sbFooter, sbAside, sbMain, sbBackTop, sbAvatar, sbSwitch };
+export {
+  sbCard,
+  sbTable,
+  sbButton,
+  sbLink,
+  sbIcon,
+  sbCol,
+  sbRow,
+  sbModal,
+  sbProgress,
+  sbSpin,
+  sbResult,
+  sbBread,
+  sbBreadItem,
+  sbUpload,
+  sbDropDown,
+  sbDropDownMenu,
+  sbDropDownItem,
+  sbMenu,
+  sbMenuItem,
+  sbSubMenu,
+  sbLayout,
+  sbHeader,
+  sbFooter,
+  sbAside,
+  sbMain,
+  sbBackTop,
+  sbAvatar,
+  sbSwitch,
+  sbAlert,
+  sbDrawer,
+  sbInput
+};
 // 批量注册
 
 // import type { App } from 'vue';
