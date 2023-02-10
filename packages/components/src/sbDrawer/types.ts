@@ -80,13 +80,18 @@ export const drawerProps = {
 
   visible: {
     type: Boolean,
-    default: undefined
+    default: undefined,
   },
   width: {
-    type: [Number, String]
+    type: [Number, String],
+    default:250
   },
   height: {
-    type: [Number, String]
+    type: [Number, String],
+    default:250,
+  },
+  drawerStyle: {
+    type: Object as PropType<CSSProperties>,
   },
   top: {
     type: [Number, String]
@@ -106,7 +111,6 @@ export const drawerProps = {
     type: Boolean,
     default: true
   },
-
   maskClosable: {
     type: Boolean,
     default: true
@@ -167,6 +171,11 @@ export const drawerProps = {
     type: Boolean,
     default: true
   },
+  renderToBody: {
+    type: Boolean,
+    default: true,
+  },
+
   draggable: {
     type: Boolean,
     default: false
@@ -177,21 +186,3 @@ export const drawerProps = {
   }
 };
 export type DrawerProps = ExtractPropTypes<typeof drawerProps>;
-
-// //icon-close
-// const iconStyles: CSSProperties = {}
-
-// export const iconCloseProps = {
-//   size: {
-//     type: [Number, String],
-//     default:[]
-//   },
-//   strokeWidth: {
-//     type: Number,
-//     default: 4
-//   },
-//   rotate: Number,
-//   spin: Boolean
-// };
-
-// export type IconCloseProps = ExtractPropTypes<typeof iconCloseProps>;
