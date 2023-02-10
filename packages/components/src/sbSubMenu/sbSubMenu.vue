@@ -7,6 +7,9 @@
     <div class="sb-sub-menu-slot">
       <slot />
     </div>
+    <div v-if="subActive" class="sb-sub-menu-slot-close">
+      <slot />
+    </div>
   </div>
 </template>
 <script lang="ts" setup>
