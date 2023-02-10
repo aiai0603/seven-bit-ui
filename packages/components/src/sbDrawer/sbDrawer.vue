@@ -6,7 +6,7 @@
       </transition>
       <transition :name="`slide-${placement}-drawer`">
         <div v-show="visible">
-          <div v-if="header" class="sb-drawer" :style="headerStyle">
+          <div v-if="header" class="sb-drawer">
             <div class="sb-drawer-header">
               <div class="sb-drawer-title">
                 <slot name="title">{{ title }}</slot>
@@ -61,19 +61,6 @@
       handleCancel();
     }
   };
-
-  const headerStyle = computed(() => {
-    const headerStyle = {
-      [props.placement]: 0
-    };
-
-    if (['right', 'left'].includes(props.placement)) {
-      headerStyle.width = isNumber(props.width) ? `${props.width}px` : props.width ?? 'auto';
-    } else {
-      headerStyle.height = isNumber(props.height) ? `${props.height}px` : props.width ?? 'auto';
-    }
-    return headerStyle;
-  });
 
   // //icon-close的属性
   // const cls = computed( () => {
