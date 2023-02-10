@@ -1,9 +1,9 @@
 <template>
   <div :class="styleClass" v-bind="attrs" @click="handleClickeMenu" @contextmenu.prevent="handleContextmenuMenu">
-    <div class="sb-dropdown-title">
+    <div class="sb-dropdown-title" @mouseenter.stop="handleHoverMenu">
       <slot name="title"></slot>
     </div>
-    <div :class="styleClassItem" :style="{ maxHeight: props.maxHeight + 'px' }">
+    <div v-if="show" :class="styleClassItem" :style="{ maxHeight: props.maxHeight + 'px' }" @mouseleave.stop="handleHoverMenu">
       <slot name="dropdown"></slot>
     </div>
   </div>
@@ -31,19 +31,19 @@
   const handleItemClick = (value: any) => {
     emits('handle-item-click', value);
   };
-  // const handleHoverMenu = () => {
-  //   if (props.trigger !== 'hover') {
-  //     return false;
-  //   }
-  //   if (props.disabled) {
-  //     return false;
-  //   }
-  //   if (!show.value) {
-  //     handleShowMenu();
-  //   } else {
-  //     handleCloseMenu();
-  //   }
-  // };
+  const handleHoverMenu = () => {
+    if (props.trigger !== 'hover') {
+      return false;
+    }
+    if (props.disabled) {
+      return false;
+    }
+    if (!show.value) {
+      handleShowMenu();
+    } else {
+      handleCloseMenu();
+    }
+  };
   const handleContextmenuMenu = () => {
     if (props.trigger !== 'contextmenu') {
       return false;

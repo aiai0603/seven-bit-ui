@@ -17,7 +17,7 @@ export const dropDownProps = {
     validator(value: string) {
       return dropDownTrigger.includes(value);
     },
-    default: 'click'
+    default: 'hover'
   }
 };
 export type DropDownProps = ExtractPropTypes<typeof dropDownProps>;
