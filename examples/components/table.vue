@@ -35,11 +35,13 @@
   const columns = [
     {
       title: 'Name',
-      dataIndex: 'name'
+      dataIndex: 'name',
+      width: '70px'
     },
     {
       title: 'Salary',
-      dataIndex: 'salary'
+      dataIndex: 'salary',
+      width: '60px'
     },
     {
       title: 'Address',
@@ -49,7 +51,8 @@
     },
     {
       title: 'Email',
-      dataIndex: 'email'
+      dataIndex: 'email',
+      width: '100px'
     }
   ];
   let data = ref([
