@@ -32,7 +32,8 @@ export const avatarProps = {
   },
   load: {
     type: Function
-  }
+  },
+  style: {}
 };
 
 export type AvatarProps = ExtractPropTypes<typeof avatarProps>;

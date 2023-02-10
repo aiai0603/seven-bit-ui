@@ -1,6 +1,8 @@
 <template>
   <div :class="styleClass" :style="style" @click="Click">
-    <span v-if="!imgUrl" class="sb-avatar-text">kif</span>
+    <span v-if="!imgUrl" class="sb-avatar-text">
+      <slot></slot>
+    </span>
     <span v-else class="sb-avatar-image">
       <div v-if="imgUrl === '1'" class="sb-avatar-image-icon">
         <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="currentColor" class="arco-icon arco-icon-image-close" stroke-width="4" stroke-linecap="butt" stroke-linejoin="miter">
@@ -24,11 +26,12 @@
   import { avatarProps } from './types';
   const props = defineProps(avatarProps);
   const style = computed(() => {
-    return {
-      fontSize: props.size / 2 + 'px',
+    let sty = {
+      fontSize: props.size / 3 + 'px',
       width: props.size + 'px',
       height: props.size + 'px'
     };
+    return Object.assign(sty, props.style);
   });
   const styleClass = computed(() => {
     return {
