@@ -125,8 +125,14 @@ export const drawerProps = {
     default: true
   },
   content: String,
-  okText: String,
-  cancelText: String,
+  okText: {
+    type:String,
+    default:'确认'
+  },
+  cancelText: {
+    type:String,
+    default:'取消'
+  },
 
   okButtonProps: {
     type: Object

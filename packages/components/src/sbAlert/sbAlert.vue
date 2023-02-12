@@ -9,7 +9,7 @@
           <sb-icon :name="`${icon.type}-circle-fill`" :style="{color:icon.color}"></sb-icon>
         </slot>
       </div>
-      <div :class="`sb-alert-body`">
+      <div class="sb-alert-body">
         <div v-if="title || $slots.title" class="sb-alert-title">
           <slot name="title">
             {{ title }}
@@ -27,9 +27,9 @@
         class="sb-alert-close-btn"
         @click="handleClose"
       >
-        <slot name="close-element">
+        <slot name="close-element" @click="onIconClick">
           <span class="sb-alert-icon-hover">
-            <sb-icon name="close" @click="onIconClick"></sb-icon>
+              <sb-icon name="close" ></sb-icon>
           </span>
         </slot>
       </div>

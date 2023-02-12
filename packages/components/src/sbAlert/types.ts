@@ -4,7 +4,10 @@ export const AlertType = ['info', 'success', 'warning', 'error'];
 
 export const alertProps = {
   content:String,
-  visible: Boolean,
+  visible: {
+    type:Boolean,
+    default:true
+  },
   type: {
     type: String,
     validator(value: string) {
@@ -18,7 +21,7 @@ export const alertProps = {
   },
   closable: {
     type: Boolean,
-    default: true
+    default: false
   },
   title: String,
   banner: {

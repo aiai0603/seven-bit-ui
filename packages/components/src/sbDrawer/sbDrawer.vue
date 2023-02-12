@@ -6,8 +6,8 @@
       </transition>
       <transition :name="`slide-${placement}-drawer`">
         <div v-show="visible">
-          <div v-if="header" class="sb-drawer" :style="style">
-            <div class="sb-drawer-header">
+          <div class="sb-drawer" :style="style">
+            <div v-if="header" class="sb-drawer-header">
               <div class="sb-drawer-title">
                 <slot name="title">{{ title }}</slot>
               </div>
