@@ -5,6 +5,6 @@ packages/components/coverage
 **/dist
 **/transitpkg
 pnpm-lock.yaml
-/examples/app.vue
+examples/app.vue
 packages/components/dist/*
 /packages/components/transitpkg/package.json

@@ -85,9 +85,10 @@ describe('test sbTable', () => {
     });
 
     await wrapper.find('#checkall').setValue(true);
-    expect(wrapper.findAll('.sb-checkbox-checked').length == data.length + 1).toBe(true);
+    expect(wrapper.findAll('.sb-table-checkbox-checked').length == data.length + 1).toBe(true);
     await wrapper.find('#checkall').setValue(false);
-    expect(wrapper.findAll('.sb-checkbox-checked').length == 0).toBe(true);
+
+    expect(wrapper.findAll('.sb-table-checkbox-checked').length == 0).toBe(true);
   });
   it('ifAllChecked test', async () => {
     const wrapper = mount(sbTable, {
@@ -98,7 +99,7 @@ describe('test sbTable', () => {
       }
     });
     await wrapper.findAll('input[type="checkbox"]')[1].setValue(true);
-    expect(wrapper.findAll('.sb-checkbox-indeterminate').length == 1).toBe(true);
+    expect(wrapper.findAll('.sb-table-checkbox-indeterminate').length == 1).toBe(true);
   });
   it('empty slot', () => {
     const wrapper = mount(sbTable, {

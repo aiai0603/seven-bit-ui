@@ -1,12 +1,9 @@
 <template>
   <transition name="zoom-in-top" @after-leave="handleAfterLeave">
     <div v-if="visible" role="error" :class="alertCls">
-      <div
-        v-if="showIcon"
-        class="sb-alert-icon"
-      >
+      <div v-if="showIcon" class="sb-alert-icon">
         <slot name="icon">
-          <sb-icon :name="`${icon.type}-circle-fill`" :style="{color:icon.color}"></sb-icon>
+          <sb-icon :name="`${icon.type}-circle-fill`" :style="{ color: icon.color }"></sb-icon>
         </slot>
       </div>
       <div class="sb-alert-body">
@@ -22,14 +19,10 @@
       <div v-if="$slots.action" class="sb-alert-action">
         <slot name="action" />
       </div>
-      <div
-        v-if="closable"
-        class="sb-alert-close-btn"
-        @click="handleClose"
-      >
+      <div v-if="closable" class="sb-alert-close-btn" @click="handleClose">
         <slot name="close-element" @click="onIconClick">
           <span class="sb-alert-icon-hover">
-              <sb-icon name="close" ></sb-icon>
+            <sb-icon name="close"></sb-icon>
           </span>
         </slot>
       </div>
@@ -40,18 +33,14 @@
   import './style/index.less';
   import { computed } from 'vue';
   import { alertProps } from './types';
-  import sbIcon from '../sbIcon'
+  import sbIcon from '../sbIcon';
 
-  const emits = defineEmits([
-    'close',
-    'after-close',
-    'update:visible'
-  ])
+  const emits = defineEmits(['close', 'after-close', 'update:visible']);
 
   const props = defineProps(alertProps);
 
   type IconType = 'info' | 'success' | 'warning' | 'error' | 'none';
-  
+
   interface IconCell {
     readonly type: string;
     readonly color: string;
@@ -74,35 +63,31 @@
 
   const icon = computed(() => MAP[props.type as IconType]);
 
-
-  const alertCls = computed( () => [
-      "sb-alert",
-      `sb-alert-${props.type}`,
-      {
-        ['sb-alert-with-title']: Boolean(props.title),
-        ['sb-alert-banner']: props.banner,
-      },
-    ])
+  const alertCls = computed(() => [
+    'sb-alert',
+    `sb-alert-${props.type}`,
+    {
+      ['sb-alert-with-title']: Boolean(props.title),
+      ['sb-alert-banner']: props.banner
+    }
+  ]);
 
   const visible = computed({
-    get : () => props.visible,
-    set : (val) => emits('update:visible',val)
+    get: () => props.visible,
+    set: val => emits('update:visible', val)
   });
 
-  const onIconClick = (e:MouseEvent) => {
+  const onIconClick = (e: MouseEvent) => {
     visible.value = false;
     emits('close', e);
-  }
+  };
 
   const handleAfterLeave = () => {
-      emits('after-close',() => true);
-    };
+    emits('after-close', () => true);
+  };
 
   const handleClose = (ev: MouseEvent) => {
-      visible.value = false;
-      emits('close', ev);
-  }; 
-  
-  
-
+    visible.value = false;
+    emits('close', ev);
+  };
 </script>

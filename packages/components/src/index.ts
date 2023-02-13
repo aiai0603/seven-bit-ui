@@ -60,6 +60,8 @@ import { default as sbDrawer } from './sbDrawer';
 
 import { default as sbInput } from './sbInput';
 
+import { default as sbImage } from './sbImage';
+
 const components = [
   sbCard,
   sbTable,
@@ -91,7 +93,8 @@ const components = [
   sbSwitch,
   sbAlert,
   sbDrawer,
-  sbInput
+  sbInput,
+  sbImage
 ];
 export default {
   install: (app: any) => {
@@ -132,7 +135,8 @@ export {
   sbSwitch,
   sbAlert,
   sbDrawer,
-  sbInput
+  sbInput,
+  sbImage
 };
 // 批量注册
 

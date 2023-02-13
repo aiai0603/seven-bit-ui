@@ -47,5 +47,5 @@ export const tableProps = {
   }
 };
 
-export type LinkProps = ExtractPropTypes<typeof tableProps>;
+export type TableProps = ExtractPropTypes<typeof tableProps>;
 export { columnType };
