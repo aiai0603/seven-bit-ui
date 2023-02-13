@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-show="visible" class="sb-drawer-container">
+    <div v-show="visible" class="sb-drawer-container" :style="{zIndex:9999}">
       <transition name="fade-drawer">
         <div v-if="mask" class="sb-drawer-mask" @click="maskIsClosable"></div>
       </transition>
