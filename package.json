@@ -67,5 +67,8 @@
     "vite-plugin-dts": "^1.7.1",
     "vitest": "^0.28.3",
     "vue": "^3.2.36"
+  },
+  "dependencies": {
+    "vue3-preview-image": "^1.1.8"
   }
 }
