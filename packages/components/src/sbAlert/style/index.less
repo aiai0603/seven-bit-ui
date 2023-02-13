@@ -8,7 +8,7 @@
   font-size: 14px;
   line-height: 1.5715;
   text-align: left;
-  border-radius: var(--border-radius-small);
+  border-radius: 2px;
 }
 
 .sb-alert-icon {
@@ -21,7 +21,7 @@
 }
 
 .sb-alert-info .sb-alert-content {
-  color: var(--color-text-1);
+  color: rgb(29,33,41);
 }
 
 
@@ -32,21 +32,36 @@
 }
 
 .sb-alert-info {
-  background-color: var(--color-primary-light-1);
+  background-color: rgb(232,243,255);
   border: 1px solid transparent;
 }
 
 .sb-alert-success {
-  background-color: var(--color-success-light-1);
+  background-color: rgb(232,255,234);
   border: 1px solid transparent;
 }
 
 .sb-alert-warning {
-  background-color: var(--color-warning-light-1);
+  background-color: rgb(255,247,232);
   border: 1px solid transparent;
 }
 
 .sb-alert-error {
-  background-color: var(--color-danger-light-1);
+  background-color: rgb(255,236,232);
   border: 1px solid transparent;
+}
+
+.sb-alert-close-btn {
+  top: 4px;
+  right: 0;
+  box-sizing: border-box;
+  margin-left: 8px;
+  padding: 0;
+  color: rgb(78,89,105);
+  font-size: 12px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: color .1s cubic-bezier(0,0,1,1);
 }

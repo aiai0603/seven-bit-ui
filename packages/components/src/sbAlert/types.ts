@@ -3,7 +3,11 @@ import type { ExtractPropTypes } from 'vue';
 export const AlertType = ['info', 'success', 'warning', 'error'];
 
 export const alertProps = {
-  visible: Boolean,
+  content:String,
+  visible: {
+    type:Boolean,
+    default:true
+  },
   type: {
     type: String,
     validator(value: string) {
@@ -17,7 +21,7 @@ export const alertProps = {
   },
   closable: {
     type: Boolean,
-    default: true
+    default: false
   },
   title: String,
   banner: {
