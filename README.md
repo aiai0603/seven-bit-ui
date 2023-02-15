@@ -47,6 +47,31 @@ pnpm run coverage   //覆盖率测试
 ```
 
 ## 开发
+### 目录结构
+```
+.
+|--.husky
+|--examples
+|    |--components
+|    |--app.vue        //组件测试
+|    ..
+|--packages
+|    |--components
+|    |    |--src       //组件
+|    |    |    |--sbAlert
+|    |    |    |    |--__alert__             //测试文件
+|    |    |    |    |--style/.less           //css
+|    |    |    |    |--index 
+|    |    |    |    |--sbAlert.vue            //组件
+|    |    |    |    |--types.ts               //interface及相关const定义  
+|    |    |    |--index.ts                    //暴露
+|    |    |    ...
+|    |    ... 
+|    |--eslint-config
+|    |--utils   
+|    ...
+...
+```
 ### 新建自己的组件
 
 1. 在 packages / components / src 目录下新建文件夹
