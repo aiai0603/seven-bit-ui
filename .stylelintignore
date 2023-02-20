@@ -3,3 +3,6 @@ packages/components/coverage/*
 packages/components/dist/*
 
 
+packages/components/src/sbSubMenu/style/index.less
+packages/components/src/sbSwitch/style/index.less
+packages/components/src/sbTable/style/index.less

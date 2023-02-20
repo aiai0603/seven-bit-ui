@@ -9,13 +9,13 @@
 
 <div align="center">
 
-基于[seven-bit-ui](https://aiai0603.github.io/)的综合Vue UI组件库
+基于[seven-bit-ui](https://aiai0603.github.io/)的综合 Vue UI 组件库
 
 </div>
 
 ## 安装使用
 
-可以用npm安装[seven-bit-ui](https://www.npmjs.com/package/seven-bit-ui)
+可以用 npm 安装[seven-bit-ui](https://www.npmjs.com/package/seven-bit-ui)
 
 ```bash
 // 使用 npm
@@ -47,7 +47,9 @@ pnpm run coverage   //覆盖率测试
 ```
 
 ## 开发
+
 ### 目录结构
+
 ```
 .
 |--.husky
@@ -61,17 +63,18 @@ pnpm run coverage   //覆盖率测试
 |    |    |    |--sbAlert
 |    |    |    |    |--__alert__             //测试文件
 |    |    |    |    |--style/.less           //css
-|    |    |    |    |--index 
+|    |    |    |    |--index
 |    |    |    |    |--sbAlert.vue            //组件
-|    |    |    |    |--types.ts               //interface及相关const定义  
+|    |    |    |    |--types.ts               //interface及相关const定义
 |    |    |    |--index.ts                    //暴露
 |    |    |    ...
-|    |    ... 
+|    |    ...
 |    |--eslint-config
-|    |--utils   
+|    |--utils
 |    ...
 ...
 ```
+
 ### 新建自己的组件
 
 1. 在 packages / components / src 目录下新建文件夹
